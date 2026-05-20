@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Superlocal — The operating system for India's local businesses. One platform, 10 verticals, WhatsApp and UPI native." />
+  <title>Superlocal — Built for Bharat</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-wordmark">SUPERLOCAL</a>
+      <div class="nav-links">
+        <a href="#demo-section" class="nav-link">Try Demo</a>
+        <a href="https://superlocalind.vercel.app/signup" class="nav-link nav-cta" target="_blank" rel="noopener">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-orb hero-orb--blue"></div>
+    <div class="hero-orb hero-orb--yellow"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-content">
+      <p class="section-label hero-label">Built for Bharat</p>
+
+      <h1 class="hero-headline">
+        <span class="hero-line">
+          <span class="hero-word">The</span>
+          <span class="hero-word">operating</span>
+          <span class="hero-word">system</span>
+        </span>
+        <span class="hero-line">
+          <span class="hero-word">for</span>
+          <span class="hero-word">India's</span>
+          <span class="hero-word">local</span>
+        </span>
+        <span class="hero-line">
+          <span class="hero-word">businesses.</span>
+        </span>
+      </h1>
+
+      <p class="hero-sub">One platform. 10 verticals. WhatsApp + UPI native.</p>
+
+      <div class="hero-buttons">
+        <a href="https://superlocalind.vercel.app/signup" class="btn btn--accent" target="_blank" rel="noopener">Start your shop &rarr;</a>
+        <a href="#demo-section" class="btn btn--ghost">Watch demo</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== THE SCALE ===================== -->
+  <section class="stats-outer" id="stats-outer">
+    <div class="stats-pin" id="stats-pin">
+      <div class="stats-track" id="stats-track">
+
+        <div class="stat-slide" id="stat-1">
+          <p class="section-label">The opportunity</p>
+          <div class="stat-number" id="stat-counter">0</div>
+          <p class="stat-desc">local businesses in India</p>
+        </div>
+
+        <div class="stat-slide" id="stat-2">
+          <p class="section-label">The problem</p>
+          <div class="stat-number">&lt; 2%</div>
+          <p class="stat-desc">have any digital presence</p>
+        </div>
+
+        <div class="stat-slide" id="stat-3">
+          <p class="section-label">The market</p>
+          <div class="stat-number">&#8377;40 trillion</div>
+          <p class="stat-desc">spent locally every year</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE CHAOS ===================== -->
+  <section class="chaos-section" id="chaos-section">
+    <div class="chaos-header" data-reveal>
+      <h2 class="section-headline">Running a local business<br/>is hard.</h2>
+    </div>
+
+    <div class="chaos-panels">
+
+      <div class="chaos-panel" data-reveal>
+        <div class="chaos-panel-inner">
+          <div class="chaos-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <div class="chaos-type">Tiffin</div>
+          <h3 class="chaos-panel-title">80 WhatsApp orders. 0 systems.</h3>
+          <div class="chaos-messages">
+            <div class="chaos-msg chaos-msg--in">Bhaiya 2 lunch please, no onion</div>
+            <div class="chaos-msg chaos-msg--in">Aaj dinner cancel karo</div>
+            <div class="chaos-msg chaos-msg--out">Ok noted</div>
+            <div class="chaos-msg chaos-msg--in">Same as yesterday but extra roti</div>
+            <div class="chaos-msg chaos-msg--in">Did you get my message??</div>
+            <div class="chaos-msg chaos-msg--in">Monthly bill kab aayega?</div>
+            <div class="chaos-msg chaos-msg--out">Haan bhaijo thoda wait karo...</div>
+          </div>
+          <p class="chaos-caption">Every order tracked in memory. Every mistake comes out of pocket.</p>
+        </div>
+      </div>
+
+      <div class="chaos-panel" data-reveal>
+        <div class="chaos-panel-inner">
+          <div class="chaos-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <div class="chaos-type">Clinic</div>
+          <h3 class="chaos-panel-title">A paper register and a missed follow-up.</h3>
+          <div class="chaos-register">
+            <div class="chaos-register-header">
+              <span>Patient</span><span>Time</span><span>Status</span>
+            </div>
+            <div class="chaos-register-row"><span>Rajesh K.</span><span>10:00</span><span class="status-ok">Done</span></div>
+            <div class="chaos-register-row"><span>Sunita M.</span><span>10:30</span><span class="status-ok">Done</span></div>
+            <div class="chaos-register-row chaos-register-row--missed"><span>Priya S.</span><span>11:00</span><span class="status-miss">No-show?</span></div>
+            <div class="chaos-register-row"><span>Anil V.</span><span>11:30</span><span class="status-wait">Waiting</span></div>
+            <div class="chaos-register-scribble">Follow up Priya — called 2x — no ans</div>
+          </div>
+          <p class="chaos-caption">Patient data in paper. Follow-ups in sticky notes. Revenue lost.</p>
+        </div>
+      </div>
+
+      <div class="chaos-panel" data-reveal>
+        <div class="chaos-panel-inner">
+          <div class="chaos-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.55 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="chaos-type">Tutor</div>
+          <h3 class="chaos-panel-title">Calling parents one by one. Every month.</h3>
+          <div class="chaos-calls">
+            <div class="chaos-call chaos-call--done">
+              <span class="call-name">Sharma family</span>
+              <span class="call-status">Paid</span>
+            </div>
+            <div class="chaos-call chaos-call--done">
+              <span class="call-name">Mehta family</span>
+              <span class="call-status">Paid</span>
+            </div>
+            <div class="chaos-call chaos-call--pending">
+              <span class="call-name">Gupta family</span>
+              <span class="call-status call-status--pending">Pending...</span>
+            </div>
+            <div class="chaos-call chaos-call--pending">
+              <span class="call-name">Patel family</span>
+              <span class="call-status call-status--pending">Not picking up</span>
+            </div>
+            <div class="chaos-call chaos-call--more">
+              <span class="call-name">+ 12 more families</span>
+              <span class="call-status call-status--more">to call</span>
+            </div>
+          </div>
+          <p class="chaos-caption">Fee collection: a second job that pays nothing.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="chaos-bottom" data-reveal>
+      <p class="chaos-conclusion">There had to be a better way.</p>
+    </div>
+  </section>
+
+  <!-- ===================== ENTER SUPERLOCAL ===================== -->
+  <section class="enter-section" id="enter-section">
+    <div class="enter-bg"></div>
+    <div class="enter-content">
+      <div class="enter-wordmark" id="enter-wordmark">SUPERLOCAL</div>
+      <p class="enter-tagline" data-reveal>
+        Superlocal gives every local business a complete digital operation — set up in minutes.
+      </p>
+
+      <div class="modules-grid" id="modules-grid">
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h18l-2 9H5L3 2z"/><path d="M5 11v3a7 7 0 0 0 14 0v-3"/></svg>
+          </div>
+          <span class="module-name">Tiffin</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="module-name">Clinic</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <span class="module-name">Turf</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="module-name">Retail</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <span class="module-name">Laundry</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <span class="module-name">Tutor</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <span class="module-name">Gym</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <span class="module-name">PG</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+          </div>
+          <span class="module-name">Rentals</span>
+        </div>
+        <div class="module-card" data-reveal>
+          <div class="module-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg>
+          </div>
+          <span class="module-name">Service</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOR PROVIDERS ===================== -->
+  <section class="provider-outer" id="provider-outer">
+    <div class="provider-pin" id="provider-pin">
+      <div class="provider-header">
+        <p class="section-label">For business owners</p>
+        <h2 class="section-headline">Everything you need to<br/>run your shop — in one tab.</h2>
+      </div>
+
+      <div class="provider-features" id="provider-features">
+
+        <div class="provider-feature" id="pf-1">
+          <div class="pf-text">
+            <div class="pf-number">01</div>
+            <h3 class="pf-title">Today View</h3>
+            <p class="pf-desc">See every order, delivery, or appointment for today. At a glance. No spreadsheets, no WhatsApp scrolling.</p>
+            <ul class="pf-list">
+              <li>Live order count by status</li>
+              <li>One-tap mark as delivered</li>
+              <li>Daily revenue snapshot</li>
+            </ul>
+          </div>
+          <div class="pf-mockup">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-status-bar">
+                  <span>9:41</span>
+                  <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1.33 7.61A11.95 11.95 0 0 1 12 2c4.07 0 7.63 2.02 9.77 5.09"/><path d="M5.07 11.38A7.95 7.95 0 0 1 12 8c2.72 0 5.14 1.36 6.61 3.44"/><path d="M10.71 15.29A3.98 3.98 0 0 1 12 15c.82 0 1.58.25 2.21.67"/><circle cx="12" cy="20" r="1"/></svg>
+                  </span>
+                </div>
+                <div class="phone-app">
+                  <div class="app-header">
+                    <span class="app-title">Today</span>
+                    <span class="app-date">Mon, 17 May</span>
+                  </div>
+                  <div class="app-stats-row">
+                    <div class="app-stat"><span class="app-stat-num">24</span><span class="app-stat-label">Active</span></div>
+                    <div class="app-stat"><span class="app-stat-num">6</span><span class="app-stat-label">Delivered</span></div>
+                    <div class="app-stat app-stat--accent"><span class="app-stat-num">&#8377;3.2k</span><span class="app-stat-label">Today</span></div>
+                  </div>
+                  <div class="app-order-list">
+                    <div class="app-order">
+                      <span class="app-order-name">Priya Sharma</span>
+                      <span class="app-order-badge app-order-badge--active">Active</span>
+                    </div>
+                    <div class="app-order">
+                      <span class="app-order-name">Ravi Mehta</span>
+                      <span class="app-order-badge app-order-badge--done">Done</span>
+                    </div>
+                    <div class="app-order">
+                      <span class="app-order-name">Sunita Patel</span>
+                      <span class="app-order-badge app-order-badge--active">Active</span>
+                    </div>
+                    <div class="app-order">
+                      <span class="app-order-name">Anil Kumar</span>
+                      <span class="app-order-badge app-order-badge--active">Active</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-home-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="provider-feature" id="pf-2">
+          <div class="pf-text">
+            <div class="pf-number">02</div>
+            <h3 class="pf-title">Bookings & Customers</h3>
+            <p class="pf-desc">Every booking comes in structured. Every customer profile auto-builds as they engage with your shop.</p>
+            <ul class="pf-list">
+              <li>Structured booking details per business type</li>
+              <li>Auto-created customer profiles</li>
+              <li>WhatsApp confirmation in one tap</li>
+            </ul>
+          </div>
+          <div class="pf-mockup">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-status-bar">
+                  <span>9:41</span>
+                </div>
+                <div class="phone-app">
+                  <div class="app-header">
+                    <span class="app-title">Bookings</span>
+                    <span class="app-badge">3 new</span>
+                  </div>
+                  <div class="booking-card booking-card--new">
+                    <div class="booking-card-top">
+                      <span class="booking-name">Ananya Desai</span>
+                      <span class="booking-status booking-status--new">New</span>
+                    </div>
+                    <div class="booking-detail">Monthly tiffin — Lunch only</div>
+                    <div class="booking-detail">Start: 1 Jun &bull; Veg plan</div>
+                    <div class="booking-actions">
+                      <button class="booking-btn booking-btn--accept">Accept</button>
+                      <button class="booking-btn booking-btn--wa">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                        WhatsApp
+                      </button>
+                    </div>
+                  </div>
+                  <div class="booking-card">
+                    <div class="booking-card-top">
+                      <span class="booking-name">Vikram Singh</span>
+                      <span class="booking-status booking-status--accepted">Accepted</span>
+                    </div>
+                    <div class="booking-detail">Monthly tiffin — Lunch + Dinner</div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-home-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="provider-feature" id="pf-3">
+          <div class="pf-text">
+            <div class="pf-number">03</div>
+            <h3 class="pf-title">Receipts & Payments</h3>
+            <p class="pf-desc">UPI, COD, or cash — track every rupee. Send receipts via WhatsApp instantly from the dashboard.</p>
+            <ul class="pf-list">
+              <li>UPI QR at counter + link payments</li>
+              <li>Khata / udhaar ledger built in</li>
+              <li>Public receipt link per transaction</li>
+            </ul>
+          </div>
+          <div class="pf-mockup">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="phone-status-bar">
+                  <span>9:41</span>
+                </div>
+                <div class="phone-app">
+                  <div class="app-header">
+                    <span class="app-title">Receipt</span>
+                    <span class="receipt-status receipt-status--paid">Paid</span>
+                  </div>
+                  <div class="receipt-block">
+                    <div class="receipt-row receipt-row--name">Priya Sharma</div>
+                    <div class="receipt-row">Tiffin — June &bull; Lunch only</div>
+                    <div class="receipt-divider"></div>
+                    <div class="receipt-row receipt-row--amount">&#8377; 1,800</div>
+                    <div class="receipt-row receipt-row--method">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                      UPI &bull; 17 May 2026
+                    </div>
+                  </div>
+                  <div class="receipt-actions">
+                    <button class="receipt-btn">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                      Share Receipt
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-home-bar"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOR CONSUMERS ===================== -->
+  <section class="consumer-section" id="consumer-section">
+    <div class="consumer-content">
+      <p class="section-label" data-reveal>For customers</p>
+      <h2 class="section-headline" data-reveal>Book any local service<br/>in under 60 seconds.</h2>
+      <p class="consumer-sub" data-reveal>No app download. No signup needed. Just tap, book, done.</p>
+
+      <div class="consumer-steps">
+        <div class="consumer-step" data-reveal>
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          </div>
+          <h3 class="step-title">Scan or tap</h3>
+          <p class="step-desc">A QR code at the counter or a WhatsApp link — one tap opens the shop page instantly.</p>
+        </div>
+        <div class="step-arrow" data-reveal>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="consumer-step" data-reveal>
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3 class="step-title">Browse & book</h3>
+          <p class="step-desc">See services, pick a time or plan, fill one short form. Everything is tailored to the business type.</p>
+        </div>
+        <div class="step-arrow" data-reveal>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="consumer-step" data-reveal>
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3 class="step-title">Done</h3>
+          <p class="step-desc">Get a confirmation token immediately. The owner is notified. Receipt follows on WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== THE SHOP LINK ===================== -->
+  <section class="shoplink-section" id="shoplink-section">
+    <div class="shoplink-content">
+      <p class="section-label" data-reveal>Your public page</p>
+      <h2 class="section-headline" data-reveal>Every business gets a<br/>public shop page.</h2>
+
+      <div class="shoplink-url-display" data-reveal>
+        <span class="shoplink-url-prefix">superlocalind.vercel.app/s/</span><span class="shoplink-url-slug">your-shop</span>
+      </div>
+
+      <p class="shoplink-desc" data-reveal>Share it on WhatsApp. Print the QR poster. Put it at the counter.</p>
+
+      <div class="shoplink-mockups" data-reveal>
+        <div class="shop-page-card">
+          <div class="shop-page-header">
+            <div class="shop-page-avatar">R</div>
+            <div class="shop-page-info">
+              <div class="shop-page-name">Rama's Home Kitchen</div>
+              <div class="shop-page-type">Tiffin Service &bull; Pune</div>
+            </div>
+          </div>
+          <div class="shop-page-desc">Fresh home-cooked meals, delivered daily. Lunch and dinner plans available.</div>
+          <div class="shop-page-plans">
+            <div class="shop-plan">
+              <span class="shop-plan-name">Lunch Only</span>
+              <span class="shop-plan-price">&#8377;1,800/mo</span>
+            </div>
+            <div class="shop-plan">
+              <span class="shop-plan-name">Lunch + Dinner</span>
+              <span class="shop-plan-price">&#8377;3,200/mo</span>
+            </div>
+          </div>
+          <button class="shop-page-cta">Subscribe Now</button>
+        </div>
+
+        <div class="qr-card">
+          <div class="qr-label">QR Poster</div>
+          <div class="qr-visual">
+            <div class="qr-grid">
+              <div class="qr-corner qr-corner--tl"></div>
+              <div class="qr-corner qr-corner--tr"></div>
+              <div class="qr-dots"></div>
+              <div class="qr-corner qr-corner--bl"></div>
+            </div>
+          </div>
+          <div class="qr-name">Rama's Home Kitchen</div>
+          <div class="qr-hint">Scan to view & book</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUILT FOR INDIA ===================== -->
+  <section class="india-section" id="india-section">
+    <div class="india-content">
+      <p class="section-label" data-reveal>Why it works</p>
+      <h2 class="section-headline" data-reveal>Designed for the way<br/>India does business.</h2>
+
+      <div class="india-pillars">
+        <div class="india-pillar" data-reveal>
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <h3 class="pillar-title">WhatsApp Native</h3>
+          <p class="pillar-desc">Notifications and receipts as WhatsApp messages. No email needed. No app to install. Your customers already have WhatsApp.</p>
+        </div>
+
+        <div class="india-pillar" data-reveal>
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          </div>
+          <h3 class="pillar-title">UPI First</h3>
+          <p class="pillar-desc">Accept UPI, COD, and cash. Customers pay however they want. QR at counter, link in WhatsApp — every rupee tracked.</p>
+        </div>
+
+        <div class="india-pillar" data-reveal>
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          </div>
+          <h3 class="pillar-title">Works Everywhere</h3>
+          <p class="pillar-desc">Fast on any device, any connection. No app download required. A basic Android phone on 4G is all your customer needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRY LIVE DEMOS ===================== -->
+  <section class="demo-section" id="demo-section">
+    <div class="demo-content">
+      <p class="section-label" data-reveal>Try it now</p>
+      <h2 class="section-headline" data-reveal>Try a live demo.</h2>
+      <p class="demo-sub" data-reveal>Real shops, real flows — no login needed.</p>
+
+      <div class="demo-grid">
+
+        <div class="demo-card" data-reveal>
+          <div class="demo-card-top">
+            <span class="demo-badge demo-badge--tiffin">Tiffin</span>
+          </div>
+          <h3 class="demo-shop-name">Rama's Home Kitchen</h3>
+          <p class="demo-shop-desc">Daily tiffin subscriptions, lunch and dinner</p>
+          <a href="https://superlocalind.vercel.app/s/ramas-kitchen" class="demo-link" target="_blank" rel="noopener">
+            Open shop &rarr;
+          </a>
+        </div>
+
+        <div class="demo-card" data-reveal>
+          <div class="demo-card-top">
+            <span class="demo-badge demo-badge--clinic">Clinic</span>
+          </div>
+          <h3 class="demo-shop-name">Sunrise Family Clinic</h3>
+          <p class="demo-shop-desc">Book doctor appointments, morning slots</p>
+          <a href="https://superlocalind.vercel.app/s/sunrise-clinic" class="demo-link" target="_blank" rel="noopener">
+            Open shop &rarr;
+          </a>
+        </div>
+
+        <div class="demo-card" data-reveal>
+          <div class="demo-card-top">
+            <span class="demo-badge demo-badge--turf">Turf</span>
+          </div>
+          <h3 class="demo-shop-name">Evergreen Sports Turf</h3>
+          <p class="demo-shop-desc">Cricket and football grounds, hourly booking</p>
+          <a href="https://superlocalind.vercel.app/s/evergreen-turf" class="demo-link" target="_blank" rel="noopener">
+            Open shop &rarr;
+          </a>
+        </div>
+
+        <div class="demo-card" data-reveal>
+          <div class="demo-card-top">
+            <span class="demo-badge demo-badge--laundry">Laundry</span>
+          </div>
+          <h3 class="demo-shop-name">Fresh &amp; Clean Laundry</h3>
+          <p class="demo-shop-desc">Pickup and delivery, per-kg pricing</p>
+          <a href="https://superlocalind.vercel.app/s/fresh-clean" class="demo-link" target="_blank" rel="noopener">
+            Open shop &rarr;
+          </a>
+        </div>
+
+        <div class="demo-card" data-reveal>
+          <div class="demo-card-top">
+            <span class="demo-badge demo-badge--retail">Retail</span>
+          </div>
+          <h3 class="demo-shop-name">Sharma General Store</h3>
+          <p class="demo-shop-desc">Kirana catalogue, order via shop link</p>
+          <a href="https://superlocalind.vercel.app/s/sharma-store" class="demo-link" target="_blank" rel="noopener">
+            Open shop &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <p class="demo-note" data-reveal>
+        Demo shops are live on the platform. Slugs shown are examples — actual demo slugs will be configured separately.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CTA / FOOTER ===================== -->
+  <footer class="cta-footer" id="cta-footer">
+    <div class="cta-orb cta-orb--1"></div>
+    <div class="cta-orb cta-orb--2"></div>
+    <div class="cta-content">
+      <p class="section-label cta-label" data-reveal>Get started</p>
+      <h2 class="cta-headline" data-reveal>Start your shop<br/>in 5 minutes.</h2>
+      <p class="cta-sub" data-reveal>Join hundreds of local businesses already on Superlocal.</p>
+      <a href="https://superlocalind.vercel.app/signup" class="btn btn--accent btn--large" target="_blank" rel="noopener" data-reveal>
+        Create your free shop &rarr;
+      </a>
+      <p class="cta-fine" data-reveal>No credit card. No setup fee. Forever free during beta.</p>
+    </div>
+    <div class="footer-line">
+      <span class="footer-copy">&copy; 2026 Superlocal.</span>
+      <span class="footer-tagline">Built for Bharat — India's local businesses.</span>
+      <a href="https://superlocalind.vercel.app" class="footer-link" target="_blank" rel="noopener">superlocalind.vercel.app</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
