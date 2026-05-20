@@ -1,6 +1,7 @@
 /* ============================================================
    SUPERLOCAL — Demo Page Animations
    GSAP + ScrollTrigger powered scroll-driven experience.
+   Light theme retheme + floating badges + hero phone tilt.
    ============================================================ */
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,43 +41,73 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   2. HERO — word reveal on load + ambient orbs
+   2. HERO — word reveal on load + ambient orbs + phone tilt
 ───────────────────────────────────── */
 
 (function initHero() {
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-  // Label
+  // Label fade in
   tl.to('.hero-label', { opacity: 1, y: 0, duration: 0.7 }, 0.3);
 
   // Word-by-word headline stagger
   tl.from('.hero-word', {
     opacity: 0,
-    y: 60,
-    stagger: 0.1,
-    duration: 0.9,
+    y: 50,
+    stagger: 0.09,
+    duration: 0.85,
     ease: 'power3.out',
   }, 0.5);
 
   // Sub and buttons
-  tl.to('.hero-sub', { opacity: 1, y: 0, duration: 0.6 }, 1.1);
-  tl.to('.hero-buttons', { opacity: 1, y: 0, duration: 0.6 }, 1.3);
-  tl.to('.hero-scroll-indicator', { opacity: 1, duration: 0.6 }, 1.6);
+  tl.to('.hero-sub', { opacity: 1, y: 0, duration: 0.6 }, 1.0);
+  tl.to('.hero-buttons', { opacity: 1, y: 0, duration: 0.6 }, 1.2);
+  tl.to('.hero-scroll-indicator', { opacity: 1, duration: 0.6 }, 1.5);
 
-  // Ambient orbs — slow floating animation
+  // Hero phone — start tilted, reveal after text
+  const heroPhone = qs('#hero-phone');
+  const heroPhoneWrap = qs('#hero-phone-wrap');
+  if (heroPhone) {
+    gsap.set(heroPhone, { rotateY: -6, rotateZ: -6, opacity: 0, y: 30 });
+    tl.to(heroPhone, {
+      rotateY: 0,
+      rotateZ: 0,
+      opacity: 1,
+      y: 0,
+      duration: 1.1,
+      ease: 'power3.out',
+    }, 0.9);
+  }
+
+  // Hero phone tilt on scroll (scrub: straightens as you scroll down)
+  if (heroPhone) {
+    gsap.to(heroPhone, {
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 2,
+      },
+      rotateZ: 3,
+      y: -20,
+      ease: 'none',
+    });
+  }
+
+  // Ambient orbs — slow subtle float
   gsap.to('.hero-orb--blue', {
-    y: -40,
-    x: 30,
-    duration: 10,
+    y: -30,
+    x: 20,
+    duration: 12,
     repeat: -1,
     yoyo: true,
     ease: 'sine.inOut',
   });
 
   gsap.to('.hero-orb--yellow', {
-    y: 50,
-    x: -30,
-    duration: 9,
+    y: 40,
+    x: -20,
+    duration: 10,
     repeat: -1,
     yoyo: true,
     ease: 'sine.inOut',
@@ -85,7 +116,56 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   3. STATS SECTION — pinned, 3 stat slides
+   3. FLOATING BADGES — independent yoyo float animations
+───────────────────────────────────── */
+
+(function initFloatingBadges() {
+  const badge1 = qs('#badge-1');
+  const badge2 = qs('#badge-2');
+  const badge3 = qs('#badge-3');
+
+  if (badge1) {
+    gsap.set(badge1, { opacity: 0, y: 10 });
+    gsap.to(badge1, { opacity: 1, y: 0, duration: 0.6, delay: 1.4, ease: 'power3.out' });
+    gsap.to(badge1, {
+      y: -10,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      delay: 2.0,
+    });
+  }
+
+  if (badge2) {
+    gsap.set(badge2, { opacity: 0, y: 10 });
+    gsap.to(badge2, { opacity: 1, y: 0, duration: 0.6, delay: 1.65, ease: 'power3.out' });
+    gsap.to(badge2, {
+      y: 15,
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      delay: 2.2,
+    });
+  }
+
+  if (badge3) {
+    gsap.set(badge3, { opacity: 0, y: 10 });
+    gsap.to(badge3, { opacity: 1, y: 0, duration: 0.6, delay: 1.85, ease: 'power3.out' });
+    gsap.to(badge3, {
+      y: -8,
+      duration: 3.5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      delay: 2.4,
+    });
+  }
+})();
+
+/* ─────────────────────────────────────
+   4. STATS SECTION — pinned, 3 stat slides
 ───────────────────────────────────── */
 
 (function initStats() {
@@ -104,7 +184,7 @@ function qsa(selector, scope = document) {
   // Initially show first slide
   slides[0].classList.add('active');
 
-  // Counter animation target value
+  // Counter animation
   const COUNTER_TARGET = 63000000;
   let counterAnimated = false;
 
@@ -115,18 +195,21 @@ function qsa(selector, scope = document) {
     if (!el) return;
     gsap.fromTo(
       { val: 0 },
-      { val: COUNTER_TARGET, duration: 2.0, ease: 'power2.out',
+      {
+        val: COUNTER_TARGET,
+        duration: 2.0,
+        ease: 'power2.out',
         onUpdate: function () {
           el.textContent = Math.round(this.targets()[0].val).toLocaleString('en-IN');
         },
-        onComplete: function() {
+        onComplete: function () {
           el.textContent = '63,000,000';
-        }
+        },
       }
     );
   }
 
-  // Scrub through slides based on scroll progress within the pinned section
+  // Scrub through slides based on scroll progress
   ScrollTrigger.create({
     trigger: outer,
     start: 'top top',
@@ -134,18 +217,11 @@ function qsa(selector, scope = document) {
     pin: pin,
     scrub: 1.5,
     onUpdate(self) {
-      const p = self.progress; // 0 to 1
-
-      // Divide into thirds
-      // 0–0.33 → slide 1
-      // 0.33–0.66 → slide 2
-      // 0.66–1 → slide 3
-
-      const thresholds = [0, 0.33, 0.66, 1];
+      const p = self.progress;
 
       let activeIndex = 0;
-      if (p >= thresholds[1] && p < thresholds[2]) activeIndex = 1;
-      if (p >= thresholds[2]) activeIndex = 2;
+      if (p >= 0.33 && p < 0.66) activeIndex = 1;
+      if (p >= 0.66) activeIndex = 2;
 
       slides.forEach((s, i) => {
         if (i === activeIndex) {
@@ -153,11 +229,15 @@ function qsa(selector, scope = document) {
           gsap.to(s, { opacity: 1, y: 0, duration: 0.4 });
         } else {
           const offset = i < activeIndex ? -60 : 60;
-          gsap.to(s, { opacity: 0, y: offset, duration: 0.3, onComplete: () => s.classList.remove('active') });
+          gsap.to(s, {
+            opacity: 0,
+            y: offset,
+            duration: 0.3,
+            onComplete: () => s.classList.remove('active'),
+          });
         }
       });
 
-      // Trigger counter on stat 1
       if (activeIndex === 0 && p < 0.1) {
         animateCounter();
       }
@@ -169,14 +249,13 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   4. DATA-REVEAL — generic scroll reveal for all [data-reveal] elements
+   5. DATA-REVEAL — generic scroll reveal
 ───────────────────────────────────── */
 
 (function initReveal() {
   const items = qsa('[data-reveal]');
   if (!items.length) return;
 
-  // Use ScrollTrigger.batch for efficiency
   ScrollTrigger.batch(items, {
     start: 'top 88%',
     onEnter(batch) {
@@ -193,7 +272,7 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   5. CHAOS PANELS — stagger in with individual triggers
+   6. CHAOS PANELS — stagger in
 ───────────────────────────────────── */
 
 (function initChaos() {
@@ -204,20 +283,20 @@ function qsa(selector, scope = document) {
     gsap.from(panel, {
       scrollTrigger: {
         trigger: panel,
-        start: 'top 85%',
+        start: 'top 86%',
         once: true,
       },
       opacity: 0,
-      y: 60,
+      y: 50,
       duration: 0.8,
-      delay: i * 0.12,
+      delay: i * 0.1,
       ease: 'power3.out',
     });
   });
 })();
 
 /* ─────────────────────────────────────
-   6. ENTER SUPERLOCAL — wordmark reveal + module grid stagger
+   7. ENTER SUPERLOCAL — wordmark reveal + module grid stagger
 ───────────────────────────────────── */
 
 (function initEnter() {
@@ -239,27 +318,25 @@ function qsa(selector, scope = document) {
   // Module cards stagger
   const cards = qsa('.module-card');
   if (cards.length) {
+    gsap.set(cards, { opacity: 0, y: 24 });
+
     gsap.to(cards, {
       scrollTrigger: {
         trigger: '#modules-grid',
-        start: 'top 80%',
+        start: 'top 82%',
         once: true,
       },
       opacity: 1,
       y: 0,
-      scale: 1,
-      stagger: 0.07,
-      duration: 0.6,
+      stagger: 0.06,
+      duration: 0.55,
       ease: 'power3.out',
     });
-
-    // Set initial state
-    gsap.set(cards, { opacity: 0, y: 30 });
   }
 })();
 
 /* ─────────────────────────────────────
-   7. PROVIDER FEATURES — scroll in each feature row
+   8. PROVIDER FEATURES — slide in alternate sides
 ───────────────────────────────────── */
 
 (function initProviderFeatures() {
@@ -267,16 +344,16 @@ function qsa(selector, scope = document) {
   if (!features.length) return;
 
   features.forEach((feature, i) => {
-    const fromX = i % 2 === 0 ? -40 : 40;
+    const fromX = i % 2 === 0 ? -35 : 35;
     gsap.from(feature, {
       scrollTrigger: {
         trigger: feature,
-        start: 'top 80%',
+        start: 'top 82%',
         once: true,
       },
       opacity: 0,
       x: fromX,
-      y: 30,
+      y: 24,
       duration: 0.9,
       ease: 'power3.out',
     });
@@ -284,7 +361,7 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   8. CONSUMER STEPS — stagger in left to right
+   9. CONSUMER STEPS — stagger left to right
 ───────────────────────────────────── */
 
 (function initConsumerSteps() {
@@ -294,7 +371,6 @@ function qsa(selector, scope = document) {
   if (!steps.length) return;
 
   const allItems = [];
-  // Interleave steps and arrows for stagger
   steps.forEach((step, i) => {
     allItems.push(step);
     if (arrows[i]) allItems.push(arrows[i]);
@@ -303,7 +379,7 @@ function qsa(selector, scope = document) {
   gsap.to(allItems, {
     scrollTrigger: {
       trigger: '.consumer-steps',
-      start: 'top 80%',
+      start: 'top 82%',
       once: true,
     },
     opacity: 1,
@@ -316,7 +392,7 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   9. INDIA PILLARS — stagger
+   10. INDIA PILLARS — stagger
 ───────────────────────────────────── */
 
 (function initIndiaPillars() {
@@ -326,7 +402,7 @@ function qsa(selector, scope = document) {
   gsap.to(pillars, {
     scrollTrigger: {
       trigger: '.india-pillars',
-      start: 'top 82%',
+      start: 'top 84%',
       once: true,
     },
     opacity: 1,
@@ -338,7 +414,7 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   10. DEMO CARDS — stagger reveal
+   11. DEMO CARDS — stagger reveal
 ───────────────────────────────────── */
 
 (function initDemoCards() {
@@ -348,7 +424,7 @@ function qsa(selector, scope = document) {
   gsap.to(cards, {
     scrollTrigger: {
       trigger: '.demo-grid',
-      start: 'top 82%',
+      start: 'top 84%',
       once: true,
     },
     opacity: 1,
@@ -360,13 +436,10 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   11. CTA FOOTER — subtle gradient pulse animation
+   12. CTA FOOTER — orb pulse animation
 ───────────────────────────────────── */
 
 (function initCTAFooter() {
-  const footer = qs('.cta-footer');
-  if (!footer) return;
-
   gsap.to('.cta-orb--1', {
     scale: 1.2,
     x: 40,
@@ -390,7 +463,7 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   12. SHOPLINK URL — typing effect on enter viewport
+   13. SHOPLINK URL — typing effect on enter viewport
 ───────────────────────────────────── */
 
 (function initShopLink() {
@@ -402,7 +475,7 @@ function qsa(selector, scope = document) {
 
   ScrollTrigger.create({
     trigger: '.shoplink-url-display',
-    start: 'top 85%',
+    start: 'top 86%',
     once: true,
     onEnter() {
       let i = 0;
@@ -416,7 +489,7 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   13. SMOOTH HORIZONTAL scroll feel for chaos section header
+   14. CHAOS HEADER — reveal
 ───────────────────────────────────── */
 
 (function initChaosHeader() {
@@ -426,18 +499,18 @@ function qsa(selector, scope = document) {
   gsap.from(header, {
     scrollTrigger: {
       trigger: header,
-      start: 'top 80%',
+      start: 'top 82%',
       once: true,
     },
     opacity: 0,
-    y: 60,
+    y: 50,
     duration: 1.0,
     ease: 'power3.out',
   });
 })();
 
 /* ─────────────────────────────────────
-   14. SCROLL PROGRESS INDICATOR — subtle brand color line at top
+   15. SCROLL PROGRESS INDICATOR — 3px brand line at top
 ───────────────────────────────────── */
 
 (function initScrollProgress() {
@@ -446,12 +519,13 @@ function qsa(selector, scope = document) {
     position: fixed;
     top: 0;
     left: 0;
-    height: 2px;
+    height: 3px;
     width: 0%;
-    background: linear-gradient(90deg, #2563eb, #3b82f6, #eab308);
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6, #eab308);
     z-index: 200;
     pointer-events: none;
     transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
   `;
   document.body.appendChild(bar);
 
@@ -467,12 +541,13 @@ function qsa(selector, scope = document) {
 })();
 
 /* ─────────────────────────────────────
-   15. PHONE MOCKUP — subtle parallax on scroll
+   16. PHONE PARALLAX — subtle vertical shift on scroll
 ───────────────────────────────────── */
 
 (function initPhoneParallax() {
-  const phones = qsa('.phone-frame');
-  phones.forEach((phone) => {
+  // Provider section phones
+  const pfPhones = qsa('.pf-phone');
+  pfPhones.forEach((phone) => {
     gsap.to(phone, {
       scrollTrigger: {
         trigger: phone,
@@ -480,14 +555,29 @@ function qsa(selector, scope = document) {
         end: 'bottom top',
         scrub: 1.5,
       },
-      y: -20,
+      y: -18,
       ease: 'none',
     });
   });
+
+  // Consumer phone
+  const consumerPhone = qs('.consumer-phone');
+  if (consumerPhone) {
+    gsap.to(consumerPhone, {
+      scrollTrigger: {
+        trigger: consumerPhone,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1.5,
+      },
+      y: -12,
+      ease: 'none',
+    });
+  }
 })();
 
 /* ─────────────────────────────────────
-   16. REFRESH ScrollTrigger on resize (debounced)
+   17. REFRESH ScrollTrigger on resize (debounced)
 ───────────────────────────────────── */
 
 (function initResizeHandler() {

@@ -24,41 +24,137 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero">
+    <div class="hero-dots"></div>
     <div class="hero-orb hero-orb--blue"></div>
     <div class="hero-orb hero-orb--yellow"></div>
-    <div class="hero-grain"></div>
 
-    <div class="hero-content">
-      <p class="section-label hero-label">Built for Bharat</p>
+    <div class="hero-layout">
+      <!-- Left: text content -->
+      <div class="hero-content">
+        <p class="section-label hero-label">Built for Bharat</p>
 
-      <h1 class="hero-headline">
-        <span class="hero-line">
-          <span class="hero-word">The</span>
-          <span class="hero-word">operating</span>
-          <span class="hero-word">system</span>
-        </span>
-        <span class="hero-line">
-          <span class="hero-word">for</span>
-          <span class="hero-word">India's</span>
-          <span class="hero-word">local</span>
-        </span>
-        <span class="hero-line">
-          <span class="hero-word">businesses.</span>
-        </span>
-      </h1>
+        <h1 class="hero-headline">
+          <span class="hero-line">
+            <span class="hero-word">The</span>
+            <span class="hero-word">operating</span>
+            <span class="hero-word">system</span>
+          </span>
+          <span class="hero-line">
+            <span class="hero-word">for</span>
+            <span class="hero-word">India's</span>
+            <span class="hero-word">local</span>
+          </span>
+          <span class="hero-line">
+            <span class="hero-word">businesses.</span>
+          </span>
+        </h1>
 
-      <p class="hero-sub">One platform. 10 verticals. WhatsApp + UPI native.</p>
+        <p class="hero-sub">One platform. 10 verticals. WhatsApp + UPI native.</p>
 
-      <div class="hero-buttons">
-        <a href="https://superlocalind.vercel.app/signup" class="btn btn--accent" target="_blank" rel="noopener">Start your shop &rarr;</a>
-        <a href="#demo-section" class="btn btn--ghost">Watch demo</a>
+        <div class="hero-buttons">
+          <a href="https://superlocalind.vercel.app/signup" class="btn btn--primary" target="_blank" rel="noopener">Start your shop &rarr;</a>
+          <a href="#demo-section" class="btn btn--ghost">Watch demo</a>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-scroll-indicator">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
+      <!-- Right: phone mockup with floating badges -->
+      <div class="hero-phone-wrap" id="hero-phone-wrap">
+        <!-- Floating badges -->
+        <div class="floating-badge floating-badge--blue" id="badge-1">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          12 orders today
+        </div>
+        <div class="floating-badge floating-badge--green" id="badge-2">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          UPI received &#8377;840
+        </div>
+        <div class="floating-badge floating-badge--yellow" id="badge-3">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          New booking: Priya
+        </div>
+
+        <!-- Phone frame: Screen A — Dashboard -->
+        <div class="phone" id="hero-phone">
+          <div class="phone-notch-bar">
+            <span class="phone-time">9:41</span>
+            <div class="phone-notch-pill"></div>
+            <span class="phone-icons">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M1.33 7.61A11.95 11.95 0 0 1 12 2c4.07 0 7.63 2.02 9.77 5.09"/><path d="M5.07 11.38A7.95 7.95 0 0 1 12 8c2.72 0 5.14 1.36 6.61 3.44"/><path d="M10.71 15.29A3.98 3.98 0 0 1 12 15c.82 0 1.58.25 2.21.67"/><circle cx="12" cy="20" r="1"/></svg>
+            </span>
+          </div>
+          <div class="phone-screen">
+            <!-- Dashboard hero banner -->
+            <div class="ps-dashboard-hero">
+              <div class="ps-date">Tuesday, 20 May</div>
+              <div class="ps-pending-label">Pending payments</div>
+              <div class="ps-pending-amount">&#8377;4,200</div>
+              <div class="ps-stat-row">
+                <div class="ps-stat-pill">
+                  <span class="ps-stat-val">18</span>
+                  <span class="ps-stat-key">Orders</span>
+                </div>
+                <div class="ps-stat-pill">
+                  <span class="ps-stat-val">12</span>
+                  <span class="ps-stat-key">Delivered</span>
+                </div>
+                <div class="ps-stat-pill">
+                  <span class="ps-stat-val">6</span>
+                  <span class="ps-stat-key">Pending</span>
+                </div>
+              </div>
+            </div>
+            <!-- Nudge card -->
+            <div class="ps-nudge-card">
+              <div class="ps-nudge-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <div class="ps-nudge-text">3 new bookings waiting</div>
+              <div class="ps-nudge-arrow">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+            <!-- Mini stat cards -->
+            <div class="ps-mini-stats">
+              <div class="ps-mini-card">
+                <div class="ps-mini-num">&#8377;14.8k</div>
+                <div class="ps-mini-label">This month</div>
+              </div>
+              <div class="ps-mini-card ps-mini-card--accent">
+                <div class="ps-mini-num">63</div>
+                <div class="ps-mini-label">Customers</div>
+              </div>
+            </div>
+            <!-- Quick action row -->
+            <div class="ps-quick-actions">
+              <button class="ps-action-btn ps-action-btn--primary">Add Order</button>
+              <button class="ps-action-btn ps-action-btn--outline">Payments</button>
+            </div>
+            <!-- Recent orders -->
+            <div class="ps-section-label">Recent orders</div>
+            <div class="ps-order-row">
+              <div class="ps-order-info">
+                <div class="ps-order-name">Priya Sharma</div>
+                <div class="ps-order-sub">Lunch tiffin</div>
+              </div>
+              <div class="ps-order-badge ps-order-badge--done">Done</div>
+            </div>
+            <div class="ps-order-row">
+              <div class="ps-order-info">
+                <div class="ps-order-name">Ramesh Kumar</div>
+                <div class="ps-order-sub">Lunch + Dinner</div>
+              </div>
+              <div class="ps-order-badge ps-order-badge--active">Active</div>
+            </div>
+          </div>
+          <div class="phone-home-indicator"></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -100,7 +196,7 @@
       <div class="chaos-panel" data-reveal>
         <div class="chaos-panel-inner">
           <div class="chaos-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
           </div>
           <div class="chaos-type">Tiffin</div>
           <h3 class="chaos-panel-title">80 WhatsApp orders. 0 systems.</h3>
@@ -111,7 +207,7 @@
             <div class="chaos-msg chaos-msg--in">Same as yesterday but extra roti</div>
             <div class="chaos-msg chaos-msg--in">Did you get my message??</div>
             <div class="chaos-msg chaos-msg--in">Monthly bill kab aayega?</div>
-            <div class="chaos-msg chaos-msg--out">Haan bhaijo thoda wait karo...</div>
+            <div class="chaos-msg chaos-msg--out">Haan bhai, thoda wait karo...</div>
           </div>
           <p class="chaos-caption">Every order tracked in memory. Every mistake comes out of pocket.</p>
         </div>
@@ -120,7 +216,7 @@
       <div class="chaos-panel" data-reveal>
         <div class="chaos-panel-inner">
           <div class="chaos-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
           <div class="chaos-type">Clinic</div>
           <h3 class="chaos-panel-title">A paper register and a missed follow-up.</h3>
@@ -141,7 +237,7 @@
       <div class="chaos-panel" data-reveal>
         <div class="chaos-panel-inner">
           <div class="chaos-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.55 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.55 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           </div>
           <div class="chaos-type">Tutor</div>
           <h3 class="chaos-panel-title">Calling parents one by one. Every month.</h3>
@@ -189,62 +285,62 @@
 
       <div class="modules-grid" id="modules-grid">
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h18l-2 9H5L3 2z"/><path d="M5 11v3a7 7 0 0 0 14 0v-3"/></svg>
+          <div class="module-icon module-icon--tiffin">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h18l-2 9H5L3 2z"/><path d="M5 11v3a7 7 0 0 0 14 0v-3"/></svg>
           </div>
           <span class="module-name">Tiffin</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="module-icon module-icon--clinic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <span class="module-name">Clinic</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="module-icon module-icon--turf">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           </div>
           <span class="module-name">Turf</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="module-icon module-icon--retail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <span class="module-name">Retail</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <div class="module-icon module-icon--laundry">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
           </div>
           <span class="module-name">Laundry</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          <div class="module-icon module-icon--tutor">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
           </div>
           <span class="module-name">Tutor</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          <div class="module-icon module-icon--gym">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
           </div>
           <span class="module-name">Gym</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <div class="module-icon module-icon--pg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           </div>
           <span class="module-name">PG</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+          <div class="module-icon module-icon--rentals">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
           </div>
           <span class="module-name">Rentals</span>
         </div>
         <div class="module-card" data-reveal>
-          <div class="module-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg>
+          <div class="module-icon module-icon--service">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg>
           </div>
           <span class="module-name">Service</span>
         </div>
@@ -262,6 +358,7 @@
 
       <div class="provider-features" id="provider-features">
 
+        <!-- Feature 1: Today View + Screen B -->
         <div class="provider-feature" id="pf-1">
           <div class="pf-text">
             <div class="pf-number">01</div>
@@ -274,49 +371,72 @@
             </ul>
           </div>
           <div class="pf-mockup">
-            <div class="phone-frame">
+            <div class="phone pf-phone">
+              <div class="phone-notch-bar">
+                <span class="phone-time">9:41</span>
+                <div class="phone-notch-pill"></div>
+                <span class="phone-icons">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                </span>
+              </div>
               <div class="phone-screen">
-                <div class="phone-status-bar">
-                  <span>9:41</span>
-                  <span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1.33 7.61A11.95 11.95 0 0 1 12 2c4.07 0 7.63 2.02 9.77 5.09"/><path d="M5.07 11.38A7.95 7.95 0 0 1 12 8c2.72 0 5.14 1.36 6.61 3.44"/><path d="M10.71 15.29A3.98 3.98 0 0 1 12 15c.82 0 1.58.25 2.21.67"/><circle cx="12" cy="20" r="1"/></svg>
-                  </span>
+                <!-- Screen B: Today / Tiffin -->
+                <div class="ps-today-header">
+                  <div class="ps-today-title">Today's Deliveries</div>
+                  <div class="ps-today-date">Mon, 17 May</div>
+                  <div class="ps-today-pill">14 / 18 done</div>
                 </div>
-                <div class="phone-app">
-                  <div class="app-header">
-                    <span class="app-title">Today</span>
-                    <span class="app-date">Mon, 17 May</span>
+                <div class="ps-delivery-row ps-delivery-row--done">
+                  <div class="ps-delivery-check ps-delivery-check--done">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
-                  <div class="app-stats-row">
-                    <div class="app-stat"><span class="app-stat-num">24</span><span class="app-stat-label">Active</span></div>
-                    <div class="app-stat"><span class="app-stat-num">6</span><span class="app-stat-label">Delivered</span></div>
-                    <div class="app-stat app-stat--accent"><span class="app-stat-num">&#8377;3.2k</span><span class="app-stat-label">Today</span></div>
+                  <div class="ps-delivery-info">
+                    <div class="ps-delivery-name">Priya Sharma</div>
+                    <div class="ps-delivery-addr">Koregaon Park</div>
                   </div>
-                  <div class="app-order-list">
-                    <div class="app-order">
-                      <span class="app-order-name">Priya Sharma</span>
-                      <span class="app-order-badge app-order-badge--active">Active</span>
-                    </div>
-                    <div class="app-order">
-                      <span class="app-order-name">Ravi Mehta</span>
-                      <span class="app-order-badge app-order-badge--done">Done</span>
-                    </div>
-                    <div class="app-order">
-                      <span class="app-order-name">Sunita Patel</span>
-                      <span class="app-order-badge app-order-badge--active">Active</span>
-                    </div>
-                    <div class="app-order">
-                      <span class="app-order-name">Anil Kumar</span>
-                      <span class="app-order-badge app-order-badge--active">Active</span>
-                    </div>
+                  <div class="ps-delivery-tag ps-delivery-tag--lunch">Lunch</div>
+                  <div class="ps-delivery-status ps-delivery-status--done">Delivered</div>
+                </div>
+                <div class="ps-delivery-row ps-delivery-row--done">
+                  <div class="ps-delivery-check ps-delivery-check--done">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
+                  <div class="ps-delivery-info">
+                    <div class="ps-delivery-name">Ramesh Kumar</div>
+                    <div class="ps-delivery-addr">Kalyani Nagar</div>
+                  </div>
+                  <div class="ps-delivery-tag ps-delivery-tag--both">Both</div>
+                  <div class="ps-delivery-status ps-delivery-status--done">Delivered</div>
+                </div>
+                <div class="ps-delivery-row">
+                  <div class="ps-delivery-check"></div>
+                  <div class="ps-delivery-info">
+                    <div class="ps-delivery-name">Sunita Devi</div>
+                    <div class="ps-delivery-addr">Baner Road</div>
+                  </div>
+                  <div class="ps-delivery-tag ps-delivery-tag--lunch">Lunch</div>
+                  <div class="ps-delivery-status ps-delivery-status--pending">Pending</div>
+                </div>
+                <div class="ps-delivery-row">
+                  <div class="ps-delivery-check"></div>
+                  <div class="ps-delivery-info">
+                    <div class="ps-delivery-name">Arjun Patel</div>
+                    <div class="ps-delivery-addr">Viman Nagar</div>
+                  </div>
+                  <div class="ps-delivery-tag ps-delivery-tag--dinner">Dinner</div>
+                  <div class="ps-delivery-status ps-delivery-status--pending">Pending</div>
+                </div>
+                <div class="ps-wa-btn">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                  Send updates
                 </div>
               </div>
-              <div class="phone-home-bar"></div>
+              <div class="phone-home-indicator"></div>
             </div>
           </div>
         </div>
 
+        <!-- Feature 2: Bookings + Screen C -->
         <div class="provider-feature" id="pf-2">
           <div class="pf-text">
             <div class="pf-number">02</div>
@@ -329,45 +449,57 @@
             </ul>
           </div>
           <div class="pf-mockup">
-            <div class="phone-frame">
+            <div class="phone pf-phone">
+              <div class="phone-notch-bar">
+                <span class="phone-time">9:41</span>
+                <div class="phone-notch-pill"></div>
+              </div>
               <div class="phone-screen">
-                <div class="phone-status-bar">
-                  <span>9:41</span>
+                <!-- Screen C: Bookings -->
+                <div class="ps-bookings-header">
+                  <div class="ps-bookings-title">Bookings</div>
+                  <div class="ps-bookings-pill">3 pending</div>
                 </div>
-                <div class="phone-app">
-                  <div class="app-header">
-                    <span class="app-title">Bookings</span>
-                    <span class="app-badge">3 new</span>
+                <div class="ps-booking-card ps-booking-card--pending">
+                  <div class="ps-booking-top">
+                    <span class="ps-booking-name">Priya Sharma</span>
+                    <span class="ps-booking-badge ps-booking-badge--pending">Pending</span>
                   </div>
-                  <div class="booking-card booking-card--new">
-                    <div class="booking-card-top">
-                      <span class="booking-name">Ananya Desai</span>
-                      <span class="booking-status booking-status--new">New</span>
-                    </div>
-                    <div class="booking-detail">Monthly tiffin — Lunch only</div>
-                    <div class="booking-detail">Start: 1 Jun &bull; Veg plan</div>
-                    <div class="booking-actions">
-                      <button class="booking-btn booking-btn--accept">Accept</button>
-                      <button class="booking-btn booking-btn--wa">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-                        WhatsApp
-                      </button>
-                    </div>
+                  <div class="ps-booking-detail">Monthly tiffin — Lunch only</div>
+                  <div class="ps-booking-detail">Start: 1 Jun &bull; Veg plan</div>
+                  <div class="ps-booking-code">#TF-2841</div>
+                  <div class="ps-booking-actions">
+                    <button class="ps-baction ps-baction--accept">Accept</button>
+                    <button class="ps-baction ps-baction--reject">Reject</button>
                   </div>
-                  <div class="booking-card">
-                    <div class="booking-card-top">
-                      <span class="booking-name">Vikram Singh</span>
-                      <span class="booking-status booking-status--accepted">Accepted</span>
-                    </div>
-                    <div class="booking-detail">Monthly tiffin — Lunch + Dinner</div>
+                </div>
+                <div class="ps-booking-card ps-booking-card--accepted">
+                  <div class="ps-booking-top">
+                    <span class="ps-booking-name">Ramesh Kumar</span>
+                    <span class="ps-booking-badge ps-booking-badge--accepted">Accepted</span>
+                  </div>
+                  <div class="ps-booking-detail">Monthly tiffin — Both meals</div>
+                  <div class="ps-booking-code">#TF-2840</div>
+                </div>
+                <div class="ps-booking-card ps-booking-card--pending">
+                  <div class="ps-booking-top">
+                    <span class="ps-booking-name">Arjun Patel</span>
+                    <span class="ps-booking-badge ps-booking-badge--pending">Pending</span>
+                  </div>
+                  <div class="ps-booking-detail">Dinner tiffin — Non-veg</div>
+                  <div class="ps-booking-code">#TF-2839</div>
+                  <div class="ps-booking-actions">
+                    <button class="ps-baction ps-baction--accept">Accept</button>
+                    <button class="ps-baction ps-baction--reject">Reject</button>
                   </div>
                 </div>
               </div>
-              <div class="phone-home-bar"></div>
+              <div class="phone-home-indicator"></div>
             </div>
           </div>
         </div>
 
+        <!-- Feature 3: Receipts + Screen E -->
         <div class="provider-feature" id="pf-3">
           <div class="pf-text">
             <div class="pf-number">03</div>
@@ -380,35 +512,47 @@
             </ul>
           </div>
           <div class="pf-mockup">
-            <div class="phone-frame">
+            <div class="phone pf-phone">
+              <div class="phone-notch-bar">
+                <span class="phone-time">9:41</span>
+                <div class="phone-notch-pill"></div>
+              </div>
               <div class="phone-screen">
-                <div class="phone-status-bar">
-                  <span>9:41</span>
+                <!-- Screen E: Receipt -->
+                <div class="ps-receipt-header">
+                  <div class="ps-receipt-label">Receipt</div>
+                  <div class="ps-receipt-biz">Sunshine Tiffin</div>
                 </div>
-                <div class="phone-app">
-                  <div class="app-header">
-                    <span class="app-title">Receipt</span>
-                    <span class="receipt-status receipt-status--paid">Paid</span>
+                <div class="ps-receipt-body">
+                  <div class="ps-receipt-customer">
+                    <div class="ps-receipt-name">Priya Sharma</div>
+                    <div class="ps-receipt-phone">9876543210</div>
                   </div>
-                  <div class="receipt-block">
-                    <div class="receipt-row receipt-row--name">Priya Sharma</div>
-                    <div class="receipt-row">Tiffin — June &bull; Lunch only</div>
-                    <div class="receipt-divider"></div>
-                    <div class="receipt-row receipt-row--amount">&#8377; 1,800</div>
-                    <div class="receipt-row receipt-row--method">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-                      UPI &bull; 17 May 2026
+                  <div class="ps-receipt-divider"></div>
+                  <div class="ps-receipt-line">
+                    <span>Lunch Tiffin &times; 30</span>
+                    <span>&#8377;2,400</span>
+                  </div>
+                  <div class="ps-receipt-divider"></div>
+                  <div class="ps-receipt-totals">
+                    <div class="ps-receipt-total-row">
+                      <span>Total</span><span>&#8377;2,400</span>
+                    </div>
+                    <div class="ps-receipt-total-row">
+                      <span>Paid</span><span class="ps-receipt-paid">&#8377;1,200</span>
+                    </div>
+                    <div class="ps-receipt-total-row ps-receipt-total-row--due">
+                      <span>Due</span><span>&#8377;1,200</span>
                     </div>
                   </div>
-                  <div class="receipt-actions">
-                    <button class="receipt-btn">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
-                      Share Receipt
-                    </button>
-                  </div>
+                  <div class="ps-receipt-status-badge">Partial</div>
+                </div>
+                <div class="ps-receipt-wa-btn">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                  Pay via UPI
                 </div>
               </div>
-              <div class="phone-home-bar"></div>
+              <div class="phone-home-indicator"></div>
             </div>
           </div>
         </div>
@@ -419,41 +563,81 @@
 
   <!-- ===================== FOR CONSUMERS ===================== -->
   <section class="consumer-section" id="consumer-section">
-    <div class="consumer-content">
-      <p class="section-label" data-reveal>For customers</p>
-      <h2 class="section-headline" data-reveal>Book any local service<br/>in under 60 seconds.</h2>
-      <p class="consumer-sub" data-reveal>No app download. No signup needed. Just tap, book, done.</p>
+    <div class="consumer-layout">
+      <div class="consumer-content">
+        <p class="section-label" data-reveal>For customers</p>
+        <h2 class="section-headline" data-reveal>Book any local service<br/>in under 60 seconds.</h2>
+        <p class="consumer-sub" data-reveal>No app download. No signup needed. Just tap, book, done.</p>
 
-      <div class="consumer-steps">
-        <div class="consumer-step" data-reveal>
-          <div class="step-number">01</div>
-          <div class="step-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        <div class="consumer-steps">
+          <div class="consumer-step" data-reveal>
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <h3 class="step-title">Scan or tap</h3>
+            <p class="step-desc">A QR code at the counter or a WhatsApp link — one tap opens the shop page instantly.</p>
           </div>
-          <h3 class="step-title">Scan or tap</h3>
-          <p class="step-desc">A QR code at the counter or a WhatsApp link — one tap opens the shop page instantly.</p>
-        </div>
-        <div class="step-arrow" data-reveal>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </div>
-        <div class="consumer-step" data-reveal>
-          <div class="step-number">02</div>
-          <div class="step-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <div class="step-arrow" data-reveal>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
-          <h3 class="step-title">Browse & book</h3>
-          <p class="step-desc">See services, pick a time or plan, fill one short form. Everything is tailored to the business type.</p>
-        </div>
-        <div class="step-arrow" data-reveal>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </div>
-        <div class="consumer-step" data-reveal>
-          <div class="step-number">03</div>
-          <div class="step-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <div class="consumer-step" data-reveal>
+            <div class="step-number">02</div>
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 class="step-title">Browse & book</h3>
+            <p class="step-desc">See services, pick a time or plan, fill one short form. Everything tailored to the business type.</p>
           </div>
-          <h3 class="step-title">Done</h3>
-          <p class="step-desc">Get a confirmation token immediately. The owner is notified. Receipt follows on WhatsApp.</p>
+          <div class="step-arrow" data-reveal>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+          <div class="consumer-step" data-reveal>
+            <div class="step-number">03</div>
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3 class="step-title">Done</h3>
+            <p class="step-desc">Get a confirmation token instantly. The owner is notified. Receipt follows on WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen D: Public Shop Page -->
+      <div class="consumer-phone-wrap" data-reveal>
+        <div class="phone consumer-phone">
+          <div class="phone-notch-bar">
+            <span class="phone-time">9:41</span>
+            <div class="phone-notch-pill"></div>
+          </div>
+          <div class="phone-screen">
+            <div class="ps-shop-header">
+              <div class="ps-shop-avatar">R</div>
+              <div class="ps-shop-info">
+                <div class="ps-shop-name">Rama's Home Kitchen</div>
+                <div class="ps-shop-type">Tiffin Service &bull; Pune</div>
+              </div>
+            </div>
+            <div class="ps-shop-desc">Fresh home-cooked meals, delivered daily. Veg and non-veg plans.</div>
+            <div class="ps-shop-tag">Tiffin</div>
+            <div class="ps-shop-services">
+              <div class="ps-shop-service">
+                <span class="ps-svc-name">Lunch Tiffin</span>
+                <span class="ps-svc-price">&#8377;80/day</span>
+              </div>
+              <div class="ps-shop-service">
+                <span class="ps-svc-name">Dinner Tiffin</span>
+                <span class="ps-svc-price">&#8377;70/day</span>
+              </div>
+              <div class="ps-shop-service">
+                <span class="ps-svc-name">Both Meals</span>
+                <span class="ps-svc-price">&#8377;140/day</span>
+              </div>
+            </div>
+            <button class="ps-shop-book-btn">Book a service</button>
+            <div class="ps-shop-footer">superlocalind.vercel.app</div>
+          </div>
+          <div class="phone-home-indicator"></div>
         </div>
       </div>
     </div>
@@ -505,7 +689,7 @@
             </div>
           </div>
           <div class="qr-name">Rama's Home Kitchen</div>
-          <div class="qr-hint">Scan to view & book</div>
+          <div class="qr-hint">Scan to view &amp; book</div>
         </div>
       </div>
     </div>
@@ -520,7 +704,7 @@
       <div class="india-pillars">
         <div class="india-pillar" data-reveal>
           <div class="pillar-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
           </div>
           <h3 class="pillar-title">WhatsApp Native</h3>
           <p class="pillar-desc">Notifications and receipts as WhatsApp messages. No email needed. No app to install. Your customers already have WhatsApp.</p>
@@ -528,7 +712,7 @@
 
         <div class="india-pillar" data-reveal>
           <div class="pillar-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
           </div>
           <h3 class="pillar-title">UPI First</h3>
           <p class="pillar-desc">Accept UPI, COD, and cash. Customers pay however they want. QR at counter, link in WhatsApp — every rupee tracked.</p>
@@ -536,7 +720,7 @@
 
         <div class="india-pillar" data-reveal>
           <div class="pillar-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
           <h3 class="pillar-title">Works Everywhere</h3>
           <p class="pillar-desc">Fast on any device, any connection. No app download required. A basic Android phone on 4G is all your customer needs.</p>
@@ -549,7 +733,7 @@
   <section class="demo-section" id="demo-section">
     <div class="demo-content">
       <p class="section-label" data-reveal>Try it now</p>
-      <h2 class="section-headline" data-reveal>Try a live demo.</h2>
+      <h2 class="section-headline demo-headline" data-reveal>Try a live demo.</h2>
       <p class="demo-sub" data-reveal>Real shops, real flows — no login needed.</p>
 
       <div class="demo-grid">
