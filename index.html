@@ -1,502 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Superlocal — Where local businesses meet their customers. The two-sided platform connecting India's local service providers with everyday consumers." />
-  <title>Superlocal — Built for Bharat</title>
-  <link rel="icon" type="image/png" href="logo.png" />
-  <link rel="apple-touch-icon" href="logo.png" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperLocal — The operating system for local businesses</title>
+  <meta name="description" content="63 million businesses run India. Most still run on memory and notebooks. SuperLocal gives them the tools to manage, grow, and thrive.">
+  <link rel="icon" href="logo_tp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- SCROLL PROGRESS BAR (injected by JS, but placeholder div for no-JS) -->
-
-  <!-- ===================== NAV ===================== -->
-  <nav class="nav" id="nav">
+  <!-- ════ NAV ════ -->
+  <nav id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-wordmark"><img src="name.png" alt="Superlocal" style="height:20px;display:block;"></a>
-      <div class="nav-links">
-        <a href="#demo-section" class="nav-link">Try Demo</a>
-        <a href="https://superlocalind.vercel.app/signup" class="nav-link nav-cta" target="_blank" rel="noopener">Start your shop</a>
+      <a href="#" class="nav-logo">
+        <img src="logo_tp.png" alt="SuperLocal" class="nav-logo-img">
+        <span class="nav-logo-text">SuperLocal</span>
+      </a>
+      <div class="nav-right">
+        <a href="https://superlocalind.vercel.app" target="_blank" rel="noopener" class="nav-link">Open App ↗</a>
+        <a href="#cta" class="nav-cta">Get Early Access</a>
       </div>
     </div>
   </nav>
 
-  <!-- ===================== SECTION 1: HERO ===================== -->
-  <section class="hero" id="hero">
-    <div class="hero-dots"></div>
-    <div class="hero-glow"></div>
-
-    <div class="hero-layout">
-      <!-- Left: text -->
-      <div class="hero-content">
-        <p class="section-label hero-label">Built for Bharat</p>
-
-        <h1 class="hero-headline">
-          <span class="hero-line">
-            <span class="hero-word">Where</span>
-            <span class="hero-word">local</span>
-            <span class="hero-word">businesses</span>
-          </span>
-          <span class="hero-line">
-            <span class="hero-word">meet</span>
-            <span class="hero-word">their</span>
-            <span class="hero-word">customers.</span>
-          </span>
-        </h1>
-
-        <p class="hero-sub">The two-sided platform connecting India's local service providers with everyday consumers.</p>
-
-        <div class="hero-buttons">
-          <a href="https://superlocalind.vercel.app/signup" class="btn btn--primary" target="_blank" rel="noopener">Start your shop &rarr;</a>
-          <a href="#demo-section" class="btn btn--ghost js-scroll-demo">Try a demo</a>
-        </div>
+  <!-- ════ HERO ════ -->
+  <section class="hero">
+    <div class="hero-img-wrap">
+      <img src="../provider_imgaes/tiffin_onbike_mblr.png" alt="Tiffin delivery on scooter, Bengaluru" class="hero-img">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal-hero">
+      <p class="hero-eyebrow">63 million businesses · Built for Bharat</p>
+      <h1 class="hero-headline">They keep<br>the city<br><em>moving.</em></h1>
+      <p class="hero-sub">The tiffin uncle racing through traffic. The flour miller who feeds 200 families. The doctor who sees 80 patients a day. All running on memory, notebooks, and sheer will.</p>
+      <div class="hero-actions">
+        <a href="https://superlocalind.vercel.app" target="_blank" rel="noopener" class="btn-hero-primary">Try SuperLocal</a>
+        <a href="#people" class="btn-hero-ghost">See their world ↓</a>
       </div>
+    </div>
+    <div class="hero-scroll-hint">scroll</div>
+  </section>
 
-      <!-- Right: phone with floating badges -->
-      <div class="hero-phone-wrap" id="hero-phone-wrap">
-        <!-- Floating badge pills -->
-        <div class="floating-badge floating-badge--blue" id="badge-1">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-          18 orders today
+  <!-- ════ BRIDGE ════ -->
+  <section class="bridge" id="people">
+    <div class="bridge-inner">
+      <p class="bridge-text reveal">Every city in India runs on people like this one.<br>They serve thousands. They're paid late. They forget nothing — because they can't afford to.</p>
+      <div class="bridge-stats reveal">
+        <div class="bridge-stat">
+          <span class="stat-num">63M+</span>
+          <span class="stat-label">MSMEs in India</span>
         </div>
-        <div class="floating-badge floating-badge--green" id="badge-2">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          UPI received &#8377;840
+        <div class="stat-divider"></div>
+        <div class="bridge-stat">
+          <span class="stat-num">90%</span>
+          <span class="stat-label">Still undigitised</span>
         </div>
-        <div class="floating-badge floating-badge--yellow" id="badge-3">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-          New booking: Priya
-        </div>
-
-        <!-- Phone frame: Screen A — Dashboard -->
-        <div class="phone" id="hero-phone">
-          <div class="phone-notch-bar">
-            <span class="phone-time">9:41</span>
-            <div class="phone-notch-pill"></div>
-            <span class="phone-icons">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M1.33 7.61A11.95 11.95 0 0 1 12 2c4.07 0 7.63 2.02 9.77 5.09"/><path d="M5.07 11.38A7.95 7.95 0 0 1 12 8c2.72 0 5.14 1.36 6.61 3.44"/><circle cx="12" cy="20" r="1"/></svg>
-            </span>
-          </div>
-          <div class="phone-screen">
-            <!-- Screen A: Dashboard -->
-            <div class="ps-dashboard-hero">
-              <div class="ps-date">Tuesday, 20 May</div>
-              <div class="ps-pending-label">Pending payments</div>
-              <div class="ps-pending-amount">&#8377;4,200</div>
-              <div class="ps-stat-row">
-                <div class="ps-stat-pill"><span class="ps-stat-val">18</span><span class="ps-stat-key">Orders</span></div>
-                <div class="ps-stat-pill"><span class="ps-stat-val">14</span><span class="ps-stat-key">Done</span></div>
-                <div class="ps-stat-pill"><span class="ps-stat-val">4</span><span class="ps-stat-key">Pending</span></div>
-              </div>
-            </div>
-            <div class="ps-nudge-card">
-              <div class="ps-nudge-icon">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-              </div>
-              <div class="ps-nudge-text">3 new bookings waiting</div>
-              <div class="ps-nudge-arrow">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </div>
-            </div>
-            <div class="ps-quick-actions">
-              <button class="ps-action-btn ps-action-btn--primary">Add Order</button>
-              <button class="ps-action-btn ps-action-btn--outline">Payments</button>
-            </div>
-            <div class="ps-shop-link-row">/s/ramas-tiffin</div>
-            <div class="ps-order-row">
-              <div class="ps-order-info"><div class="ps-order-name">Priya Sharma</div><div class="ps-order-sub">Lunch tiffin</div></div>
-              <div class="ps-order-badge ps-order-badge--done">Done</div>
-            </div>
-            <div class="ps-order-row">
-              <div class="ps-order-info"><div class="ps-order-name">Rohit Kumar</div><div class="ps-order-sub">Lunch + Dinner</div></div>
-              <div class="ps-order-badge ps-order-badge--active">Active</div>
-            </div>
-          </div>
-          <div class="phone-home-indicator"></div>
+        <div class="stat-divider"></div>
+        <div class="bridge-stat">
+          <span class="stat-num">₹10.7L Cr</span>
+          <span class="stat-label">Delayed payments / yr</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SECTION 2: MEET THE TWO SIDES ===================== -->
-  <section class="two-sides-section" id="two-sides">
-    <div class="two-sides-layout">
-      <!-- Provider side -->
-      <div class="side-col provider-col" id="provider-col">
-        <div class="side-inner side-inner--provider">
-          <div class="side-icon-wrap side-icon-wrap--provider">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          </div>
-          <div class="side-label">Provider</div>
-          <div class="side-name">Mama Sharma</div>
-          <div class="side-sub">Home Tiffin Service, Pune</div>
-          <p class="side-desc">"80 WhatsApp messages a day. Paper notebook for orders. Chasing payments by phone. She's running a business but drowning in chaos."</p>
-          <div class="side-tag">Needs: order management, payments, bookings</div>
-        </div>
-      </div>
+  <!-- ════ PHOTO STRIP ════ -->
+  <section class="strip-section" id="strip-section">
+    <div class="strip-track" id="photoStrip">
 
-      <!-- Center connector -->
-      <div class="connector-col" id="connector-col">
-        <div class="connector-badge"><img src="logo_tp.png" alt="Superlocal" style="width:28px;height:28px;display:block;margin:0 auto;"></div>
-        <div class="connector-line connector-line--v"></div>
-        <div class="connector-bridge">Superlocal is their bridge.</div>
-      </div>
-
-      <!-- Consumer side -->
-      <div class="side-col consumer-col" id="consumer-col">
-        <div class="side-inner side-inner--consumer">
-          <div class="side-icon-wrap side-icon-wrap--consumer">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-          </div>
-          <div class="side-label">Consumer</div>
-          <div class="side-name">Priya</div>
-          <div class="side-sub">Student, new to Pune</div>
-          <p class="side-desc">"Needs a tiffin service, a laundry, maybe a tutor. Has no idea where to start. Asking seniors, Facebook groups, random recommendations."</p>
-          <div class="side-tag">Needs: discovery, booking, no download</div>
+      <article class="strip-card">
+        <div class="strip-img-wrap">
+          <img src="../provider_imgaes/flour_mill_2_mblr.png" alt="Flour mill worker, Maharashtra">
         </div>
-      </div>
+        <div class="strip-caption">
+          <span class="caption-tag">Flour Mill · Maharashtra</span>
+          <p>He pours grain with dust clouds swirling. 200 families wait. Every single order lives inside his head.</p>
+        </div>
+      </article>
+
+      <article class="strip-card">
+        <div class="strip-img-wrap">
+          <img src="../provider_imgaes/electrician_mblr.png" alt="Electrician at work" style="object-position: center 20%;">
+        </div>
+        <div class="strip-caption">
+          <span class="caption-tag">Electrician · Pune</span>
+          <p>Every wire in place. The building around him hums and blurs — he doesn't move until the job is done.</p>
+        </div>
+      </article>
+
+      <article class="strip-card">
+        <div class="strip-img-wrap">
+          <img src="../provider_imgaes/doctor_mblr.png" alt="Doctor writing prescriptions">
+        </div>
+        <div class="strip-caption">
+          <span class="caption-tag">Physician · Pune</span>
+          <p>Writing prescriptions since 6 AM. His appointment book is from 2009. Still going strong.</p>
+        </div>
+      </article>
+
+      <article class="strip-card">
+        <div class="strip-img-wrap">
+          <img src="../provider_imgaes/turf_mblr.png" alt="Sports turf manager, Pune">
+        </div>
+        <div class="strip-caption">
+          <span class="caption-tag">Sports Turf · Pune</span>
+          <p>3 grounds, 15 teams, 200 weekly bookings — all coordinated over WhatsApp. One message at a time.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="strip-controls">
+      <button class="strip-btn" id="stripPrev" aria-label="Previous">←</button>
+      <div class="strip-dots" id="stripDots"></div>
+      <button class="strip-btn" id="stripNext" aria-label="Next">→</button>
+    </div>
+    <p class="strip-hint">drag to scroll</p>
+  </section>
+
+  <!-- ════ CINEMA INTERSTITIAL — clinic ════ -->
+  <section class="cinema-section">
+    <div class="cinema-img-wrap">
+      <img src="../provider_imgaes/clinic_mblr.png" alt="Neighbourhood clinic, India" class="cinema-img">
+    </div>
+    <div class="cinema-overlay"></div>
+    <div class="cinema-content reveal">
+      <p class="section-eyebrow">The Still Point</p>
+      <h2 class="cinema-headline">The city moves.<br><em>He doesn't.</em></h2>
+      <p class="cinema-sub">Every local business is the calm centre of its own chaos. The still point the neighbourhood orbits around.</p>
     </div>
   </section>
 
-  <!-- ===================== SECTION 3: THE CHAOS (pinned) ===================== -->
-  <section class="chaos-outer" id="chaos-outer">
-    <div class="chaos-pin" id="chaos-pin">
-      <div class="chaos-title-area">
-        <p class="section-label">The problem</p>
-        <h2 class="chaos-headline">Running a local business<br/>shouldn't feel like this.</h2>
-      </div>
+  <!-- ════ PROBLEM ════ -->
+  <section class="problem-section">
+    <div class="problem-inner">
 
-      <div class="chaos-panels-wrap" id="chaos-panels-wrap">
+      <div class="problem-text-col reveal">
+        <p class="section-eyebrow">The Reality</p>
+        <h2 class="problem-headline">The same four problems.<br>Every shop.<br>Every city.</h2>
 
-        <!-- Panel A: WhatsApp nightmare -->
-        <div class="chaos-panel" id="chaos-panel-a">
-          <div class="chaos-panel-inner">
-            <div class="chaos-panel-label">Panel A</div>
-            <h3 class="chaos-panel-title">47 messages. Before 9 AM.</h3>
-            <div class="chaos-phone-mock">
-              <div class="chaos-chat-header">
-                <div class="chaos-chat-avatar">W</div>
-                <div class="chaos-chat-name">WhatsApp — Customers (47)</div>
-                <div class="chaos-unread">47</div>
-              </div>
-              <div class="chaos-chat-body">
-                <div class="chaos-bubble chaos-bubble--in">Order for tomorrow?</div>
-                <div class="chaos-bubble chaos-bubble--in">Bhai same as yesterday?</div>
-                <div class="chaos-bubble chaos-bubble--out">Haan bhai noted</div>
-                <div class="chaos-bubble chaos-bubble--in">My tiffin didn't come today</div>
-                <div class="chaos-bubble chaos-bubble--in">Can I add lunch also?</div>
-                <div class="chaos-bubble chaos-bubble--in">Payment done on GPay</div>
-                <div class="chaos-bubble chaos-bubble--in">Are you there??</div>
-              </div>
+        <div class="problem-list">
+          <div class="problem-item">
+            <span class="problem-num">01</span>
+            <div class="problem-item-text">
+              <strong>Orders tracked in notebooks</strong>
+              <p>Or in their heads. When memory fails, money leaks. And it always fails eventually.</p>
             </div>
-            <p class="chaos-caption">47 messages. Before 9 AM.</p>
           </div>
-        </div>
-
-        <!-- Panel B: Paper notebook -->
-        <div class="chaos-panel" id="chaos-panel-b">
-          <div class="chaos-panel-inner">
-            <div class="chaos-panel-label">Panel B</div>
-            <h3 class="chaos-panel-title">A paper register that gets lost in the rain.</h3>
-            <div class="chaos-notebook">
-              <div class="chaos-notebook-header">
-                <span>Name</span><span>Room</span><span>Plan</span><span>Rate</span><span>Paid</span>
-              </div>
-              <div class="chaos-notebook-row">
-                <span>Priya</span><span>Rm 204</span><span>Lunch</span><span>&#8377;80</span><span class="nb-ok">&#10003;</span>
-              </div>
-              <div class="chaos-notebook-row">
-                <span>Rohit</span><span>Rm 412</span><span>Both</span><span>&#8377;140</span><span class="nb-maybe">?</span>
-              </div>
-              <div class="chaos-notebook-row chaos-notebook-row--warn">
-                <span>Sneha</span><span>Koregaon</span><span>Dinner</span><span>&#8377;70</span><span class="nb-no">&#10007;</span>
-              </div>
-              <div class="chaos-notebook-scribble">Follow up Sneha — 3rd time this month...</div>
+          <div class="problem-item">
+            <span class="problem-num">02</span>
+            <div class="problem-item-text">
+              <strong>WhatsApp as the only CRM</strong>
+              <p>The same reminder typed 20 times a day. Customer messages buried in 47 group chats.</p>
             </div>
-            <p class="chaos-caption">A paper register that gets lost in the rain.</p>
           </div>
-        </div>
-
-        <!-- Panel C: Payment chase -->
-        <div class="chaos-panel" id="chaos-panel-c">
-          <div class="chaos-panel-inner">
-            <div class="chaos-panel-label">Panel C</div>
-            <h3 class="chaos-panel-title">Every rupee. Chased manually.</h3>
-            <div class="chaos-chase-list">
-              <div class="chaos-chase-row chaos-chase-row--due">
-                <div class="chaos-chase-name">Rohit Kumar</div>
-                <div class="chaos-chase-amt">&#8377;560 due</div>
-                <div class="chaos-chase-status">Called 3x</div>
-              </div>
-              <div class="chaos-chase-row chaos-chase-row--due">
-                <div class="chaos-chase-name">Anita Desai</div>
-                <div class="chaos-chase-amt">&#8377;280 due</div>
-                <div class="chaos-chase-status">No response</div>
-              </div>
-              <div class="chaos-chase-row chaos-chase-row--warn">
-                <div class="chaos-chase-name">Suresh Patil</div>
-                <div class="chaos-chase-amt">&#8377;840 due</div>
-                <div class="chaos-chase-status">Said "later"</div>
-              </div>
+          <div class="problem-item">
+            <span class="problem-num">03</span>
+            <div class="problem-item-text">
+              <strong>Payments everywhere, visibility nowhere</strong>
+              <p>Cash, UPI, credit, advance — scattered across pockets and apps. No single view of who owes what.</p>
             </div>
-            <p class="chaos-caption">Every month. Every customer. Every rupee — chased manually.</p>
           </div>
-        </div>
-
-      </div>
-
-      <div class="chaos-better" id="chaos-better">
-        There is a better way.
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SECTION 4: ENTER SUPERLOCAL ===================== -->
-  <section class="enter-section" id="enter-section">
-    <div class="enter-bg"></div>
-    <div class="enter-content">
-      <div class="enter-wordmark" id="enter-wordmark">
-        <img src="sl-logo.gif" alt="" style="width:72px;height:72px;display:block;margin:0 auto 20px;">
-        SUPERLOCAL
-      </div>
-      <p class="enter-tagline">One platform. Every local service.</p>
-
-      <div class="modules-grid" id="modules-grid">
-
-        <div class="module-card">
-          <div class="module-icon module-icon--tiffin">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h18l-2 9H5L3 2z"/><path d="M5 11v3a7 7 0 0 0 14 0v-3"/></svg>
-          </div>
-          <span class="module-name">Tiffin / Mess</span>
-          <span class="module-tag">Daily meals</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--laundry">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-          <span class="module-name">Laundry</span>
-          <span class="module-tag">Pickup &amp; deliver</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--tutor">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-          </div>
-          <span class="module-name">Tutor</span>
-          <span class="module-tag">Home coaching</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--pg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          </div>
-          <span class="module-name">PG / Flats</span>
-          <span class="module-tag">Accommodation</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--clinic">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <span class="module-name">Clinic</span>
-          <span class="module-tag">Appointments</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--turf">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-          </div>
-          <span class="module-name">Turf</span>
-          <span class="module-tag">Sports booking</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--gym">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-          </div>
-          <span class="module-name">Gym</span>
-          <span class="module-tag">Memberships</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--retail">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <span class="module-name">Retail</span>
-          <span class="module-tag">Kirana &amp; shops</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--rentals">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
-          </div>
-          <span class="module-name">Rentals</span>
-          <span class="module-tag">Equipment hire</span>
-        </div>
-
-        <div class="module-card">
-          <div class="module-icon module-icon--service">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg>
-          </div>
-          <span class="module-name">Services</span>
-          <span class="module-tag">Any local service</span>
-        </div>
-
-      </div>
-
-      <p class="modules-note">Priority 1: Tiffin, Laundry, Tutoring, PG — targeting student communities first.</p>
-    </div>
-  </section>
-
-  <!-- ===================== SECTION 5: FOR MAMA SHARMA (Provider Journey) ===================== -->
-  <section class="provider-section" id="provider-section">
-    <div class="provider-content">
-      <div class="provider-header" data-reveal>
-        <p class="section-label">For providers</p>
-        <h2 class="section-headline">From chaos to clarity,<br/>in minutes.</h2>
-      </div>
-
-      <!-- Step 1 -->
-      <div class="provider-step" id="pstep-1">
-        <div class="pstep-text">
-          <div class="pstep-num">Step 1</div>
-          <h3 class="pstep-title">Sign up and pick your business type</h3>
-          <p class="pstep-desc">Answer 3 questions. Choose your domain. You're live.</p>
-        </div>
-        <div class="pstep-phone">
-          <!-- Setup Flow Screen -->
-          <div class="phone pstep-phone-frame">
-            <div class="phone-notch-bar">
-              <span class="phone-time">9:41</span>
-              <div class="phone-notch-pill"></div>
+          <div class="problem-item">
+            <span class="problem-num">04</span>
+            <div class="problem-item-text">
+              <strong>No tools built for them</strong>
+              <p>"I tried 3 apps. They're all made for companies with 50 employees. I just need to know who paid."</p>
             </div>
-            <div class="phone-screen">
-              <div class="ps-setup-header">
-                <div class="ps-setup-title">What's your business?</div>
-                <div class="ps-setup-sub">Step 2 of 3</div>
-              </div>
-              <div class="ps-setup-grid">
-                <div class="ps-setup-card ps-setup-card--active">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 2h18l-2 9H5L3 2z"/><path d="M5 11v3a7 7 0 0 0 14 0v-3"/></svg>
-                  <span>Tiffin</span>
-                </div>
-                <div class="ps-setup-card">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                  <span>Laundry</span>
-                </div>
-                <div class="ps-setup-card">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                  <span>Tutor</span>
-                </div>
-                <div class="ps-setup-card">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                  <span>PG</span>
-                </div>
-                <div class="ps-setup-card">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span>Clinic</span>
-                </div>
-                <div class="ps-setup-card">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
-                  <span>Retail</span>
-                </div>
-              </div>
-              <button class="ps-setup-next">Continue with Tiffin &rarr;</button>
-            </div>
-            <div class="phone-home-indicator"></div>
           </div>
         </div>
       </div>
 
-      <!-- Step 2 -->
-      <div class="provider-step provider-step--flip" id="pstep-2">
-        <div class="pstep-text">
-          <div class="pstep-num">Step 2</div>
-          <h3 class="pstep-title">Manage your day from one screen</h3>
-          <p class="pstep-desc">Today's orders. Pending deliveries. Payments due. All in one view — every morning.</p>
-        </div>
-        <div class="pstep-phone">
-          <!-- Screen B: Today View -->
-          <div class="phone pstep-phone-frame">
-            <div class="phone-notch-bar">
-              <span class="phone-time">9:41</span>
-              <div class="phone-notch-pill"></div>
-            </div>
-            <div class="phone-screen">
-              <div class="ps-today-header">
-                <div class="ps-today-title">Today's Deliveries — Tiffin</div>
-                <div class="ps-today-date">Mon, 17 May</div>
-                <div class="ps-today-pill">14 / 18 done</div>
-              </div>
-              <div class="ps-delivery-row ps-delivery-row--done">
-                <div class="ps-delivery-check ps-delivery-check--done">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <div class="ps-delivery-info"><div class="ps-delivery-name">Priya Sharma</div><div class="ps-delivery-addr">Lunch</div></div>
-                <div class="ps-delivery-status ps-delivery-status--done">Delivered</div>
-              </div>
-              <div class="ps-delivery-row ps-delivery-row--done">
-                <div class="ps-delivery-check ps-delivery-check--done">
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <div class="ps-delivery-info"><div class="ps-delivery-name">Rohit Kumar</div><div class="ps-delivery-addr">Both</div></div>
-                <div class="ps-delivery-status ps-delivery-status--done">Delivered</div>
-              </div>
-              <div class="ps-delivery-row">
-                <div class="ps-delivery-check"></div>
-                <div class="ps-delivery-info"><div class="ps-delivery-name">Sunita Devi</div><div class="ps-delivery-addr">Dinner</div></div>
-                <div class="ps-delivery-status ps-delivery-status--pending">Pending</div>
-              </div>
-              <div class="ps-delivery-row">
-                <div class="ps-delivery-check"></div>
-                <div class="ps-delivery-info"><div class="ps-delivery-name">Arjun Patel</div><div class="ps-delivery-addr">Lunch</div></div>
-                <div class="ps-delivery-status ps-delivery-status--pending">Pending</div>
-              </div>
-              <div class="ps-mark-all-btn">Mark all delivered</div>
-            </div>
-            <div class="phone-home-indicator"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="provider-step" id="pstep-3">
-        <div class="pstep-text">
-          <div class="pstep-num">Step 3</div>
-          <h3 class="pstep-title">Share your link. Customers book themselves.</h3>
-          <p class="pstep-desc">Get a public shop link. Share on WhatsApp. Put the QR at your counter. Customers book without calling you.</p>
-        </div>
-        <div class="pstep-phone">
-          <!-- Screen D: Public Shop (provider preview) -->
-          <div class="phone pstep-phone-frame">
-            <div class="phone-notch-bar">
-              <span class="phone-time">9:41</span>
-              <div class="phone-notch-pill"></div>
-            </div>
-            <div class="phone-screen">
-              <div class="ps-shop-header">
-                <div class="ps-shop-avatar">R</div>
-                <div class="ps-shop-info">
-                  <div class="ps-shop-name">Rama's Home Kitchen</div>
-                  <div class="ps-shop-type">Tiffin Service &bull; Pune</div>
-                </div>
-              </div>
-              <div class="ps-shop-tag">Tiffin</div>
-              <div class="ps-shop-services">
-                <div class="ps-shop-service"><span class="ps-svc-name">Lunch Tiffin</span><span class="ps-svc-price">&#8377;80/day</span></div>
-                <div class="ps-shop-service"><span class="ps-svc-name">Dinner Tiffin</span><span class="ps-svc-price">&#8377;70/day</span></div>
-                <div class="ps-shop-service"><span class="ps-svc-name">Both Meals</span><span class="ps-svc-price">&#8377;140/day</span></div>
-              </div>
-              <button class="ps-shop-book-btn">Book a service</button>
-              <div class="ps-shop-url-bar">superlocalind.vercel.app/s/ramas-tiffin</div>
-            </div>
-            <div class="phone-home-indicator"></div>
+      <div class="problem-img-col reveal">
+        <div class="problem-img-wrap">
+          <img src="../provider_imgaes/electrician_mblr.png" alt="Electrician at work, Pune" style="object-position: center 15%;">
+          <div class="problem-img-caption-block">
+            <p>An electrician in Pune. Sharp hands. Blurred world. He's been doing this job for 22 years without a single missed appointment.</p>
           </div>
         </div>
       </div>
@@ -504,280 +187,142 @@
     </div>
   </section>
 
-  <!-- ===================== SECTION 6: FOR PRIYA (Consumer Journey) ===================== -->
-  <section class="consumer-section" id="consumer-section">
-    <div class="consumer-content">
-      <div class="consumer-header" data-reveal>
-        <p class="section-label">For customers</p>
-        <h2 class="section-headline">Find, book, and pay<br/>in under 60 seconds.</h2>
-      </div>
-
-      <div class="consumer-steps">
-
-        <div class="consumer-step-card" data-reveal>
-          <div class="cstep-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-          </div>
-          <div class="cstep-num">Step 1</div>
-          <h3 class="cstep-title">Discover</h3>
-          <p class="cstep-desc">Scan a QR code at the hostel noticeboard, or tap a WhatsApp link from a friend.</p>
-        </div>
-
-        <div class="cstep-arrow" data-reveal>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </div>
-
-        <div class="consumer-step-card" data-reveal>
-          <div class="cstep-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div class="cstep-num">Step 2</div>
-          <h3 class="cstep-title">Browse &amp; Book</h3>
-          <p class="cstep-desc">See services, prices, and slots. Fill your name and phone. Submit.</p>
-          <!-- Screen D: Public shop page inline -->
-          <div class="cstep-phone-mini">
-            <div class="phone phone--mini">
-              <div class="phone-notch-bar phone-notch-bar--mini">
-                <span class="phone-time">9:41</span>
-                <div class="phone-notch-pill"></div>
-              </div>
-              <div class="phone-screen">
-                <div class="ps-shop-header ps-shop-header--mini">
-                  <div class="ps-shop-avatar ps-shop-avatar--mini">R</div>
-                  <div class="ps-shop-info"><div class="ps-shop-name ps-shop-name--mini">Rama's Home Kitchen</div><div class="ps-shop-type ps-shop-type--mini">Tiffin &bull; Pune</div></div>
-                </div>
-                <div class="ps-shop-services ps-shop-services--mini">
-                  <div class="ps-shop-service ps-shop-service--mini"><span class="ps-svc-name ps-svc-name--mini">Lunch Tiffin</span><span class="ps-svc-price ps-svc-price--mini">&#8377;80/day</span></div>
-                  <div class="ps-shop-service ps-shop-service--mini"><span class="ps-svc-name ps-svc-name--mini">Dinner</span><span class="ps-svc-price ps-svc-price--mini">&#8377;70/day</span></div>
-                </div>
-                <button class="ps-shop-book-btn ps-shop-book-btn--mini">Book a service</button>
-              </div>
-              <div class="phone-home-indicator phone-home-indicator--mini"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cstep-arrow" data-reveal>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </div>
-
-        <div class="consumer-step-card" data-reveal>
-          <div class="cstep-icon-wrap cstep-icon-wrap--green">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-          </div>
-          <div class="cstep-num">Step 3</div>
-          <h3 class="cstep-title">Confirmed instantly</h3>
-          <p class="cstep-desc">Get a confirmation code. Show it when you arrive — or pay advance via UPI.</p>
-          <div class="cstep-confirm">
-            <div class="cstep-confirm-code">A7X2</div>
-            <div class="cstep-confirm-badge">Confirmed</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="consumer-callout" data-reveal>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        No app download. No account needed. Just a link.
-      </div>
+  <!-- ════ PULL QUOTE ════ -->
+  <section class="quote-section">
+    <div class="quote-bg-wrap">
+      <img src="../provider_imgaes/doctor_mblr.png" alt="" class="quote-bg-img" aria-hidden="true">
+    </div>
+    <div class="quote-overlay"></div>
+    <div class="quote-content reveal">
+      <svg class="quote-mark" viewBox="0 0 48 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 36V21.6C0 9.6 7.2 2.4 21.6 0l2.7 4.5C17.4 6 13.5 10.2 13.5 16.2V18h9V36H0zm25.5 0V21.6C25.5 9.6 32.7 2.4 47.1 0L49.8 4.5C42.9 6 39 10.2 39 16.2V18h9V36H25.5z"/>
+      </svg>
+      <blockquote>I have 40 regular customers. I track everything in my head. When I forget, I lose money. Nobody has built anything simple enough for me.</blockquote>
+      <cite>— Laundry shop owner, Kothrud, Pune</cite>
     </div>
   </section>
 
-  <!-- ===================== SECTION 7: THE SHOP LINK MOMENT ===================== -->
-  <section class="shoplink-section" id="shoplink-section">
-    <div class="shoplink-content">
-      <p class="section-label" data-reveal>Your public page</p>
-      <h2 class="section-headline" data-reveal>Every business gets<br/>their own public page.</h2>
-
-      <div class="shoplink-url-display" data-reveal>
-        <span class="shoplink-prefix">superlocalind.vercel.app/s/</span><span class="shoplink-slug" id="shoplink-slug">ramas-tiffin</span>
+  <!-- ════ SOLUTION ════ -->
+  <section class="solution-section">
+    <div class="container">
+      <div class="solution-header reveal">
+        <p class="section-eyebrow light">The Solution</p>
+        <h2 class="solution-headline">A digital notebook<br>that actually works.</h2>
+        <p class="solution-sub">Not a CRM. Not an ERP. A system built around how local businesses actually work — from the phone already in their pocket.</p>
       </div>
 
-      <p class="shoplink-desc" data-reveal>Share it anywhere. It works on any phone.</p>
-
-      <div class="shoplink-mockups" data-reveal>
-        <!-- QR card -->
-        <div class="shoplink-feature-card">
-          <div class="qr-visual-wrap">
-            <div class="qr-grid">
-              <div class="qr-corner qr-corner--tl"></div>
-              <div class="qr-corner qr-corner--tr"></div>
-              <div class="qr-dots-area"></div>
-              <div class="qr-corner qr-corner--bl"></div>
-            </div>
-          </div>
-          <div class="shoplink-feature-label">Print it. Stick it. Done.</div>
-          <div class="shoplink-feature-sub">QR poster for your counter or noticeboard.</div>
+      <div class="solution-grid">
+        <div class="sol-card reveal">
+          <div class="sol-num">01</div>
+          <h3>Every order, in one place</h3>
+          <p>Every customer, every order, every status — visible at a glance. No more flipping through pages.</p>
         </div>
-
-        <!-- WhatsApp share -->
-        <div class="shoplink-feature-card">
-          <div class="wa-share-mock">
-            <div class="wa-mock-header">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="#22c55e"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-              WhatsApp
-            </div>
-            <div class="wa-mock-link">superlocalind.vercel.app/s/ramas-tiffin</div>
-            <div class="wa-mock-preview">
-              <div class="wa-mock-preview-title">Rama's Home Kitchen</div>
-              <div class="wa-mock-preview-sub">Book tiffin online &rarr;</div>
-            </div>
-          </div>
-          <div class="shoplink-feature-label">Share on WhatsApp. Customers book from the chat.</div>
-          <div class="shoplink-feature-sub">No back-and-forth. No missed orders.</div>
+        <div class="sol-card reveal">
+          <div class="sol-num">02</div>
+          <h3>One-tap WhatsApp reminders</h3>
+          <p>Personalised payment reminders sent with one tap. Stop typing the same message 20 times a day.</p>
+        </div>
+        <div class="sol-card reveal">
+          <div class="sol-num">03</div>
+          <h3>Know exactly who owes you</h3>
+          <p>UPI QR, cash, advance — all in one view. Your money, always accounted for.</p>
+        </div>
+        <div class="sol-card reveal">
+          <div class="sol-num">04</div>
+          <h3>Bookings and scheduling</h3>
+          <p>Appointments, recurring orders, slots. No double-booking. No missed customers. No phone calls.</p>
+        </div>
+        <div class="sol-card reveal">
+          <div class="sol-num">05</div>
+          <h3>Your own shop link</h3>
+          <p>Customers book directly with you. No middlemen. No commission. Your reputation, made visible online.</p>
+        </div>
+        <div class="sol-card reveal">
+          <div class="sol-num">06</div>
+          <h3>Built for ₹500/day businesses</h3>
+          <p>No training manual. No onboarding call. Open it, understand it, use it — in Hindi or English.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SECTION 8: BUILT FOR THE WAY INDIA WORKS ===================== -->
-  <section class="india-section" id="india-section">
-    <div class="india-content">
-      <p class="section-label" data-reveal>Why it works</p>
-      <h2 class="section-headline" data-reveal>Built for the way India works.</h2>
-
-      <div class="india-pillars">
-
-        <div class="india-pillar" data-reveal>
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-          </div>
-          <h3 class="pillar-title">WhatsApp Native</h3>
-          <p class="pillar-desc">Notifications, order confirmations, and receipts delivered as WhatsApp messages — not emails nobody opens.</p>
-        </div>
-
-        <div class="india-pillar" data-reveal>
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-          </div>
-          <h3 class="pillar-title">UPI First</h3>
-          <p class="pillar-desc">Accept payments via UPI, COD, or cash. Track every rupee. Send receipts with a tap.</p>
-        </div>
-
-        <div class="india-pillar" data-reveal>
-          <div class="pillar-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          </div>
-          <h3 class="pillar-title">Zero Friction</h3>
-          <p class="pillar-desc">Customers book via a web link. No download. No account. Works on any Android, any connection.</p>
-        </div>
-
+  <!-- ════ WHO IT'S FOR ════ -->
+  <section class="who-section">
+    <div class="container">
+      <p class="section-eyebrow reveal">Who it's for</p>
+      <h2 class="who-headline reveal">If you serve customers locally,<br>this is built for you.</h2>
+      <div class="who-chips reveal">
+        <span class="who-chip">Tiffin Services</span>
+        <span class="who-chip">Laundry &amp; Press</span>
+        <span class="who-chip">Clinics &amp; Doctors</span>
+        <span class="who-chip">Tutors &amp; Coaching</span>
+        <span class="who-chip">Sports Turfs</span>
+        <span class="who-chip">Auto Garages</span>
+        <span class="who-chip">Salons &amp; Barbershops</span>
+        <span class="who-chip">Tailors</span>
+        <span class="who-chip">Flour Mills</span>
+        <span class="who-chip">Repair Shops</span>
+        <span class="who-chip">PG &amp; Hostels</span>
+        <span class="who-chip">Gyms &amp; Fitness</span>
+        <span class="who-chip who-chip--more">+ many more</span>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SECTION 9: THE STRATEGY ===================== -->
-  <section class="strategy-section" id="strategy-section">
-    <div class="strategy-content">
-      <p class="section-label" data-reveal>Go-to-market</p>
-      <h2 class="section-headline" data-reveal>Starting with students.<br/>Scaling to cities.</h2>
-      <p class="strategy-sub" data-reveal>Students moving to new cities are the perfect wedge. They need tiffin, laundry, a tutor, and a PG — all at once. They're tech-comfortable. They share links naturally.</p>
-
-      <div class="strategy-timeline">
-        <div class="strategy-line-track"><div class="strategy-line-fill" id="strategy-line-fill"></div></div>
-        <div class="strategy-items">
-
-          <div class="strategy-item" data-reveal>
-            <div class="strategy-dot"></div>
-            <div class="strategy-item-content">
-              <div class="strategy-period">Days 1&ndash;3</div>
-              <p class="strategy-desc">We help businesses track orders, payments, and get a daily review of their operations.</p>
-            </div>
-          </div>
-
-          <div class="strategy-item" data-reveal>
-            <div class="strategy-dot"></div>
-            <div class="strategy-item-content">
-              <div class="strategy-period">Days 3&ndash;4</div>
-              <p class="strategy-desc">Businesses get a shareable link. Their customers book directly — no more WhatsApp chaos.</p>
-            </div>
-          </div>
-
-          <div class="strategy-item" data-reveal>
-            <div class="strategy-dot strategy-dot--accent"></div>
-            <div class="strategy-item-content">
-              <div class="strategy-period">Phase 2</div>
-              <p class="strategy-desc">More verticals. More cities. The operating layer for every local service in India.</p>
-            </div>
-          </div>
-
+  <!-- ════ FIELD ════ -->
+  <section class="field-section">
+    <div class="container">
+      <p class="section-eyebrow reveal">From the field</p>
+      <h2 class="field-headline reveal">We didn't build this<br>in a co-working space.</h2>
+      <p class="field-sub reveal">We built it in their shops.</p>
+      <div class="field-quotes">
+        <div class="field-quote reveal">
+          <svg class="fq-mark" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true"><path d="M0 18V10.8C0 4.8 3.6 1.2 10.8 0l1.35 2.25C8.7 3 6.75 5.1 6.75 8.1V9h4.5V18H0zm12.75 0V10.8C12.75 4.8 16.35 1.2 23.55 0l1.35 2.25C21.45 3 19.5 5.1 19.5 8.1V9H24V18H12.75z"/></svg>
+          <p>"I type the same WhatsApp reminder 20 times a day. Copy-paste, change the name, change the amount. Every single day."</p>
+          <cite>Tiffin service owner, Baner, Pune</cite>
+        </div>
+        <div class="field-quote reveal">
+          <svg class="fq-mark" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true"><path d="M0 18V10.8C0 4.8 3.6 1.2 10.8 0l1.35 2.25C8.7 3 6.75 5.1 6.75 8.1V9h4.5V18H0zm12.75 0V10.8C12.75 4.8 16.35 1.2 23.55 0l1.35 2.25C21.45 3 19.5 5.1 19.5 8.1V9H24V18H12.75z"/></svg>
+          <p>"I tried 3 apps before. They're all built for companies with 50 employees. I just need to know who paid and who didn't."</p>
+          <cite>Salon owner, Deccan, Pune</cite>
+        </div>
+        <div class="field-quote reveal">
+          <svg class="fq-mark" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true"><path d="M0 18V10.8C0 4.8 3.6 1.2 10.8 0l1.35 2.25C8.7 3 6.75 5.1 6.75 8.1V9h4.5V18H0zm12.75 0V10.8C12.75 4.8 16.35 1.2 23.55 0l1.35 2.25C21.45 3 19.5 5.1 19.5 8.1V9H24V18H12.75z"/></svg>
+          <p>"My son set up a Google Sheet for me. I couldn't use it. It's not that I'm not smart — the tools just aren't made for how I work."</p>
+          <cite>Tailor, Swargate, Pune</cite>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SECTION 10: LIVE DEMO ===================== -->
-  <section class="demo-section" id="demo-section">
-    <div class="demo-bg"></div>
-    <div class="demo-content">
-      <p class="section-label demo-label" data-reveal>Try it live</p>
-      <h2 class="demo-headline" data-reveal>Try it live.</h2>
-      <p class="demo-sub" data-reveal>Real demo shops, real flows. No login required.</p>
-
-      <div class="demo-grid">
-
-        <div class="demo-card" data-reveal>
-          <div class="demo-card-type">Tiffin</div>
-          <h3 class="demo-card-name">Rama's Home Kitchen</h3>
-          <p class="demo-card-desc">Daily lunch and dinner subscriptions</p>
-          <a href="https://superlocalind.vercel.app/signup" class="demo-card-btn" target="_blank" rel="noopener">Open shop &rarr;</a>
-        </div>
-
-        <div class="demo-card" data-reveal>
-          <div class="demo-card-type demo-card-type--clinic">Clinic</div>
-          <h3 class="demo-card-name">Sunrise Family Clinic</h3>
-          <p class="demo-card-desc">Book doctor appointments, morning slots</p>
-          <a href="https://superlocalind.vercel.app/signup" class="demo-card-btn" target="_blank" rel="noopener">Open shop &rarr;</a>
-        </div>
-
-        <div class="demo-card" data-reveal>
-          <div class="demo-card-type demo-card-type--turf">Turf</div>
-          <h3 class="demo-card-name">Evergreen Sports Turf</h3>
-          <p class="demo-card-desc">Cricket and football, hourly booking</p>
-          <a href="https://superlocalind.vercel.app/signup" class="demo-card-btn" target="_blank" rel="noopener">Open shop &rarr;</a>
-        </div>
-
-        <div class="demo-card" data-reveal>
-          <div class="demo-card-type demo-card-type--laundry">Laundry</div>
-          <h3 class="demo-card-name">Fresh &amp; Clean Laundry</h3>
-          <p class="demo-card-desc">Pickup and delivery, per-kg pricing</p>
-          <a href="https://superlocalind.vercel.app/signup" class="demo-card-btn" target="_blank" rel="noopener">Open shop &rarr;</a>
-        </div>
-
-        <div class="demo-card" data-reveal>
-          <div class="demo-card-type demo-card-type--retail">Retail</div>
-          <h3 class="demo-card-name">Sharma General Store</h3>
-          <p class="demo-card-desc">Browse catalogue, place orders directly</p>
-          <a href="https://superlocalind.vercel.app/signup" class="demo-card-btn" target="_blank" rel="noopener">Open shop &rarr;</a>
-        </div>
-
+  <!-- ════ CTA ════ -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <h2 class="cta-headline reveal">Start managing your<br>business the right way.</h2>
+      <p class="cta-sub reveal">Join local businesses across Pune already using SuperLocal. We'll set you up personally — free to start, no credit card required.</p>
+      <div class="cta-actions reveal">
+        <a href="https://superlocalind.vercel.app" target="_blank" rel="noopener" class="btn-cta-primary">Open SuperLocal ↗</a>
+        <a href="mailto:hello@superlocal.in" class="btn-cta-ghost">Talk to us</a>
       </div>
-
-      <p class="demo-note" data-reveal>Demo shop links will be live before 30th May.</p>
+      <p class="cta-location reveal">Building in Pune · For India</p>
     </div>
   </section>
 
-  <!-- ===================== SECTION 11: CTA FOOTER ===================== -->
-  <footer class="cta-footer" id="cta-footer">
-    <div class="cta-orb cta-orb--1"></div>
-    <div class="cta-orb cta-orb--2"></div>
-    <div class="cta-content">
-      <p class="section-label cta-label" data-reveal>Get started</p>
-      <h2 class="cta-headline" data-reveal>Start your shop.</h2>
-      <p class="cta-sub" data-reveal>Free during beta. No setup fees. Takes 5 minutes.</p>
-      <a href="https://superlocalind.vercel.app/signup" class="btn btn--accent btn--large cta-btn" target="_blank" rel="noopener" data-reveal>Create your shop &rarr;</a>
-      <a href="#" class="btn btn--ghost-white cta-ghost" data-reveal>Book a call</a>
-      <p class="cta-fine" data-reveal>No credit card. No setup fee. Forever free during beta.</p>
-    </div>
-    <div class="footer-bar">
-      <span class="footer-copy" style="display:inline-flex;align-items:center;gap:6px;"><img src="logo_tp.png" alt="" style="width:16px;height:16px;">Superlocal</span>
-      <span class="footer-sep">&mdash;</span>
-      <span class="footer-tagline">Built for Bharat</span>
-      <span class="footer-sep">&middot;</span>
-      <a href="https://superlocalind.vercel.app" class="footer-link" target="_blank" rel="noopener">superlocalind.vercel.app</a>
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <img src="logo_tp.png" alt="SuperLocal" class="footer-logo-img">
+        <span>SuperLocal</span>
+      </div>
+      <p class="footer-tagline">The operating system for local businesses.</p>
+      <div class="footer-bottom">
+        <p>© 2026 SuperLocal. All rights reserved.</p>
+        <a href="mailto:hello@superlocal.in">hello@superlocal.in</a>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
